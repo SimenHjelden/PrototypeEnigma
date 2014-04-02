@@ -21,8 +21,7 @@ body{
 }
 
 #mainContent {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding: 30px 10px 30px 10px;
 }
 #mainContent nav ul {
 	list-style: none;
@@ -47,12 +46,38 @@ body{
 	padding: 10px;
 	
 }
-
-
 .clearLeft {
 	clear: left;
 }
-
+#mainContent label {
+	font-weight: 100;
+}
+.btnFull {
+	padding: 10px;
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.14);
+}
+#loginBtn {
+	background: #2ecc71;
+}
+#regBtn {
+	background: #aaa;
+}
+input[type="text"], input[type="password"] {
+	padding: 10px;
+	border: 1px solid #cecece;
+	border-radius: 3px;
+	outline: none;
+	width: 100%;
+	margin-bottom: 10px;
+	font-weight: 100;
+	font-size: 14px;
+}
 nav ul.menuSection label{
 	float:left;
 	width:955px;
