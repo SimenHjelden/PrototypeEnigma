@@ -161,3 +161,14 @@ input[type="text"], input[type="password"] {
 	font-weight: 100;
 	font-size: 14px;
 }
+
+#tilbake{
+	width:75px;
+	height:35px;
+	background-color:rgb(204,0,51);
+	border:none;
+	font-family:"Century Gothic";
+	color:#fff;
+	font-size:1em;
+	margin:0px 0px 10px 0px;
+}
