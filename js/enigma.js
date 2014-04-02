@@ -3,9 +3,9 @@
 	// Elements
 	var container;
 	// Buttons
-	var loginBtn;
+	var loginBtn, regBtn;
 	// Pages
-	var loginPage, mainPage;
+	var loginPage, regPage, mainPage;
 
 	var init = function()
 	{
@@ -20,15 +20,18 @@
 
 		// Buttons
 		loginBtn = document.getElementById("loginBtn");
+		regBtn = document.getElementById("regBtn");
 
 		// PageUrls
 		loginPage = "login.html";
 		mainPage = "main.html";
+		regPage = "reg.html";
 	}
 
 	var setEventHandlers = function()
 	{
 		loginBtn.addEventListener("click", login, false);
+		regBtn.addEventListener("click", function(){goTo(regPage);}, false);
 	}
 
 	var login = function()
