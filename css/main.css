@@ -9,56 +9,34 @@ body{
 	width: 100%;
 	margin: auto;
 	margin-top: 10px;
-	border: solid 1px #333;
 }
 
 #mainHeader {
-	height: 150px;
+	height: 90px;
 	background-color: #3498db;
 	color: #fff;
-	text-align: center;
 	padding-top: 20px;
 }
 
+#mainHeader #logo{
+	float:left;
+	margin:0px 10px 0px 10px;
+	}
+
+#mainHeader h1{
+	display:inline-block;
+	font-size:1.8em;
+	padding:10px 0px 0px 0px;
+	float:left;
+	font-family:"Century Gothic";
+	}
+
 #mainContent {
 	padding:10px;
+	height:auto;
 }
 #mainContent nav ul {
 	list-style: none;
-}
-#mainContent nav ul {
-	list-style: none;
-
-}
-#mainContent nav ul li{
-	color: white;
-	font-weight: 200;
-	font-size: 0.7em;
-	
-	
-}
-
-#mainContent nav ul li:nth-of-type(1){
-	border-bottom-left-radius:10px;
-
-}
-
-#mainContent nav ul li:nth-of-type(3){
-	border-bottom-right-radius:10px;
-}
-	
-
-#mainContent nav ul li label{
-width:100%;
-float:left;
-height:30px;
-background-color:#3498db;
-padding:5px 0px 0px 5px;
-}
-
-#mainContent nav ul ul{
-	text-align:center;
-	margin-bottom:20px;
 }
 
 #mainMenu ul h2{
@@ -69,9 +47,26 @@ padding:5px 0px 0px 5px;
 	font-weight: 300;
 }
 
+
+#mainContent nav ul li{
+	color: white;
+	font-weight: 200;
+	font-size: 0.7em;	
+}
+
+#mainContent nav ul li:nth-of-type(1){
+	border-bottom-left-radius:10px;
+}
+
+#mainContent nav ul li:nth-of-type(3){
+	border-bottom-right-radius:10px;
+}
+	
+	
 #mainMenu ul li a{
 	color: #fff;
 	line-height: 3em;
+	text-align:center;
 }
 
 .margin{
@@ -83,10 +78,6 @@ padding:5px 0px 0px 5px;
 	margin: auto;	
 }
 
-#mainMenu ul li{
-	list-style-type: none;
-	text-align: center;
-}
 
 .mainBlue{
 	background-color: #2395BC;
@@ -120,13 +111,13 @@ padding:5px 0px 0px 5px;
 .lightGrey a{
 	background-color: #474950;
 	border-bottom-right-radius: 10px;
-	width: 33.2% !important;	
+	width: 33.3% !important;	
 }
 .subMenu a{
 	line-height: 50px;
 	float: left;
 	text-decoration: none;
-	width: 33.5%;
+	width: 33.3%;
 	
 }
 .subMenuSettings {
