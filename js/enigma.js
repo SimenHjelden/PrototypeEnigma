@@ -28,17 +28,18 @@
 
 	var setEventHandlers = function()
 	{
-		loginBtn.addEventListener("click", goTo, false);
+		loginBtn.addEventListener("click", login, false);
 	}
 
-	var goTo = function()
+	var login = function()
 	{
-		switch(this.id)
-		{
-			case "loginBtn" :
-				window.location.assign(mainPage);
-				break;
-		}
+		// Do loginmagic
+		goTo(mainPage);
+	}
+
+	var goTo = function(pageUrl)
+	{
+		window.location.assign(pageUrl);
 	}
 
 	window.onload = init;
