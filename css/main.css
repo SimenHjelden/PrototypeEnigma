@@ -162,7 +162,7 @@ input[type="text"], input[type="password"] {
 	font-size: 14px;
 }
 
-#tilbake{
+#backBtn{
 	width:75px;
 	height:35px;
 	background-color:rgb(204,0,51);
