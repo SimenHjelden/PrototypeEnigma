@@ -5,7 +5,7 @@
 	// Buttons
 	var loginBtn, regBtn;
 	// Pages
-	var loginPage, regPage, mainPage;
+	var loginPage, regPage, mainPage, forgotPwPage;
 
 	var init = function()
 	{
@@ -26,12 +26,13 @@
 		loginPage = "login.html";
 		mainPage = "main.html";
 		regPage = "reg.html";
+		forgotPwPage = "forgot-pw.html";
 	}
 
 	var setEventHandlers = function()
 	{
-		loginBtn.addEventListener("click", login, false);
-		regBtn.addEventListener("click", function(){goTo(regPage);}, false);
+		if(loginBtn!=null){ loginBtn.addEventListener("click", login, false); }
+		if(regBtn!=null){ regBtn.addEventListener("click", function(){goTo(mainPage);}, false); }
 	}
 
 	var login = function()
