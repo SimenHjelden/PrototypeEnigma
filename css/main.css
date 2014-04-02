@@ -1,3 +1,44 @@
-body, #enigma {
+body{
 	margin: 0;
+	background-color: #ecf0f1;
+	font-family: sans-serif;
+}
+
+#enigma {
+	width: 960px;
+	margin: auto;
+	margin-top: 10px;
+	border: solid 1px #333;
+}
+
+#mainHeader {
+	height: 150px;
+	background-color: #3498db;
+	color: #fff;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#mainContent {
+	padding: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+@media handheld, screen and (max-width:1024px){
+	#enigma {
+		width: 768px;
+	}
+}
+
+@media handheld, screen and (max-width:850px){
+	#enigma {
+		width: 90%;
+	}
+}
+
+@media handheld, screen and (max-width:500px){
+	#enigma {
+		width: 320px;
+	}
 }
