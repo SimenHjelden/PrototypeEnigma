@@ -25,6 +25,34 @@ body{
 	padding-bottom: 30px;
 }
 
+nav ul {
+	list-style: none;
+	padding: 0px;
+	text-align: center;
+}
+nav ul li {
+	margin-top: 10px;
+	clear: both;
+}
+nav ul li ul {
+	padding-bottom: 10px;
+	border-bottom: solid 1px #ddd;
+}
+nav ul li ul li {
+	height: 50px;
+	width: 32%;
+	padding-top: 10px;
+	font-size: 2em;
+	background-color: #27ae60;
+	color: #fff;
+	margin-top: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+nav ul li ul li:hover {
+	background-color: #2ecc71;
+}
+
 @media handheld, screen and (max-width:1024px){
 	#enigma {
 		width: 768px;
