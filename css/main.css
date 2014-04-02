@@ -65,8 +65,14 @@ body{
 #loginBtn {
 	background: #2ecc71;
 }
+#loginBtn:active {
+	background: #27ae60;
+}
 #regBtn {
 	background: #aaa;
+}
+#regBtn:active {
+	background: #868686;
 }
 input[type="text"], input[type="password"] {
 	padding: 10px;
