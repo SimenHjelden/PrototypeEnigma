@@ -3,7 +3,7 @@
 	// Elements
 	var container;
 	// Buttons
-	var loginBtn, regBtn;
+	var loginBtn, regBtn, backBtn;
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage;
 
@@ -21,6 +21,7 @@
 		// Buttons
 		loginBtn = document.getElementById("loginBtn");
 		regBtn = document.getElementById("regBtn");
+		backBtn = document.getElementById("tilbake");
 
 		// PageUrls
 		loginPage = "login.html";
@@ -33,6 +34,7 @@
 	{
 		if(loginBtn!=null){ loginBtn.addEventListener("click", login, false); }
 		if(regBtn!=null){ regBtn.addEventListener("click", function(){goTo(mainPage);}, false); }
+		if(backBtn!=null){ backBtn.addEventListener("click", function(){history.go(-1);}, false); }
 	}
 
 	var login = function()
