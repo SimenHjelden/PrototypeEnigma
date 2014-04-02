@@ -6,7 +6,7 @@ body{
 }
 
 #enigma {
-	width: 960px;
+	width: 100%;
 	margin: auto;
 	margin-top: 10px;
 	border: solid 1px #333;
@@ -21,7 +21,7 @@ body{
 }
 
 #mainContent {
-	padding:20px;
+	padding:10px;
 }
 #mainContent nav ul {
 	list-style: none;
@@ -32,6 +32,8 @@ body{
 }
 #mainContent nav ul li{
 	color: white;
+	font-weight: 200;
+	font-size: 0.7em;
 	
 	
 }
@@ -59,36 +61,76 @@ padding:5px 0px 0px 5px;
 	margin-bottom:20px;
 }
 
-#mainContent nav ul ul li {
-	position:relative;
-	display:inline;
-	float:left;
-	width:33.33%;
-	
-	text-align: center;
-	margin:-10;
-	padding:0;
-	background-color:#2980b9;
-	
-}
-#mainContent nav ul li ul li {
-	display: inline;
-	text-align: center;
-	
-}
-#mainContent nav ul li ul li a {
-	width: 32%;
-	float: left;
-	margin: 3px;
-	color: white;
-	padding: 10px;
-	width:100%;
-	height:100%;
-	margin:0;
-	
+#mainMenu ul h2{
+	color: #fff;
+	text-transform: uppercase;
+	padding-left: 3%;
+	line-height: 200%;
+	font-weight: 300;
 }
 
+#mainMenu ul li a{
+	color: #fff;
+	line-height: 3em;
+}
+
+.margin{
+	margin-top: 4em;
+}
+
+#mainMenu{
+	width: 100%;
+	margin: auto;	
+}
+
+#mainMenu ul li{
+	list-style-type: none;
+	text-align: center;
+}
+
+.mainBlue{
+	background-color: #2395BC;
+}
+
+.mainRed{
+	background-color: #C03A2A;
+}
+
+.mainGreen{
+	background-color: #24AD5F;
+}
+.mainMenuShadow {
+	border-bottom: 3px solid rgba(0,0,0,0.12);
+}
+
+.topLabel{
+	width: 100%;
+	height: 50px;	
+}
+
+.darkGrey a{
+	background-color: #37393F;
+	border-bottom-left-radius: 10px;
+}
+
+.midGrey a{
+	background-color: #3C3E44;
+	}
 	
+.lightGrey a{
+	background-color: #474950;
+	border-bottom-right-radius: 10px;
+	width: 33.2% !important;	
+}
+.subMenu a{
+	line-height: 50px;
+	float: left;
+	text-decoration: none;
+	width: 33.5%;
+	
+}
+.subMenuSettings {
+	width: 150% !important;
 }
 .clearLeft {
 	clear: left;
@@ -127,23 +169,4 @@ input[type="text"], input[type="password"] {
 	margin-bottom: 10px;
 	font-weight: 100;
 	font-size: 14px;
-}
-
-
-@media handheld, screen and (max-width:1024px){
-	#enigma {
-		width: 768px;
-	}
-}
-
-@media handheld, screen and (max-width:850px){
-	#enigma {
-		width: 90%;
-	}
-}
-
-@media handheld, screen and (max-width:500px){
-	#enigma {
-		width: 320px;
-	}
 }
