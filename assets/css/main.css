@@ -87,3 +87,14 @@ body{ background-color: #ecf0f1;	 }
 
 
 #mainContent label { font-weight: 100; }
+
+
+/*+-----------------+*/
+/*|                 |*/
+/*|   	  Map 	    |*/
+/*|                 |*/
+/*+-----------------+*/
+#map-canvas {
+	width: 100%;
+	height: 500px;
+}
