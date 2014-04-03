@@ -23,6 +23,8 @@
 	var setEventHandlers = function()
 	{	
 		if(checkPwd != null){checkPwd.addEventListener("change", checkedPwd, false); }
+		txtPwd.addEventListener("change", pwdMatch, false);
+		txtRepeatPwd.addEventListener("change", pwdMatch, false);
 	}
 	 
 	 
@@ -40,6 +42,20 @@
 				txtRepeatPwd.style.display = "none";
 				}
 		}
+		
+		var pwdMatch = function(){
+			if(txtPwd.value != "" && txtRepeatPwd != ""){
+				if(txtPwd.value == txtRepeatPwd.value){
+					txtPwd.style.borderColor = "#2ecc71";
+					txtRepeatPwd.style.borderColor = "#2ecc71";
+					}
+					else if(txtPwd.value != txtRepeatPwd.value){
+						txtPwd.style.borderColor = "#c0392b";
+						txtRepeatPwd.style.border = "#c0392b";	
+					}
+			}
+		}
+		
 	 
 	 window.onload = init;
 	 
