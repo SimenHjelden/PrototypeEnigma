@@ -31,7 +31,8 @@
 	}
 
 	var setEventHandlers = function()
-	{
+	{	
+		if(checkPwd != null){checkPwd.addEventListener("change", checkedPwd, false); }
 		if(loginBtn!=null){ loginBtn.addEventListener("click", login, false); }
 		if(regBtn!=null){ regBtn.addEventListener("click", function(){goTo(mainPage);}, false); }
 		if(backBtn!=null){ backBtn.addEventListener("click", function(){history.go(-1);}, false); }
@@ -47,7 +48,8 @@
 	{
 		window.location.assign(pageUrl);
 	}
-
+	
+	
 	window.onload = init;
 
 })();
