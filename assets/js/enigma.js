@@ -1,7 +1,7 @@
 (function(){
 
 	// Elements
-	var container, txtPwd, txtRepeatPwd, pwd, repeatPwd, checkPwd;
+	var container;
 	// Buttons
 	var loginBtn, regBtn, backBtn;
 	// Pages
@@ -17,11 +17,6 @@
 	{
 		// Elements
 		container = document.getElementById("enigma");
-		txtPwd = document.getElementById("txtPwd");
-		txtRepeatPwd = document.getElementById("txtRepeatPwd");
-		pwd = document.getElementById("pwd");
-		repeatPwd = document.getElementById("repeatPwd");
-		checkPwd = document.getElementById("checkPwd");
 
 		// Buttons
 		loginBtn = document.getElementById("loginBtn");
@@ -54,20 +49,6 @@
 		window.location.assign(pageUrl);
 	}
 	
-	var checkedPwd = function(){
-		if(checkPwd.checked){
-			pwd.style.display = "block";
-			txtPwd.style.display = "block";
-			repeatPwd.style.display = "block";
-			txtRepeatPwd.style.display = "block";
-			}
-			else{
-				pwd.style.display = "none";
-				txtPwd.style.display = "none";
-				repeatPwd.style.display = "none";
-				txtRepeatPwd.style.display = "none";
-				}
-		}
 	
 	window.onload = init;
 
