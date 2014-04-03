@@ -1,0 +1,109 @@
+/*
+* 1: Farger
+* 2: Inputs
+* 3: Knapper
+* 4: Bredder
+*/
+
+/*+-----------------+*/
+/*|                 |*/
+/*|  1   Farger     |*/
+/*|                 |*/
+/*+-----------------+*/
+
+.mainMenuShadow { border-bottom: 3px solid rgba(0,0,0,0.12);}
+
+.mainBlue{ background-color: #2395BC; }
+
+.mainRed{ background-color: #C03A2A; }
+
+.mainGreen{ background-color: #24AD5F; }
+
+.darkGrey a, .darkGrey{ background-color: #37393F !important; }
+
+.midGrey a, .midGrey{ background-color: #3C3E44 !important; }
+	
+.lightGrey a, .lightGrey{ background-color: #474950 !important; }
+/*+-----------------+*/
+/*|                 |*/
+/*|  2   Inputs     |*/
+/*|                 |*/
+/*+-----------------+*/
+
+input[type="text"], input[type="password"] {
+	padding: 10px;
+	border: 1px solid #cecece;
+	border-radius: 3px;
+	outline: none;
+	width: 100%;
+	margin-bottom: 10px;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+input[type="date"]{
+	padding: 10px;
+	border: 1px solid #cecece;
+	border-radius: 3px;
+	outline: none;
+	width: 50%;
+	margin:0px 0px 0px 0px;
+	font-weight: 100;
+	font-size: 14px;
+	float:left;
+	clear:right;
+}
+
+input[type="number"]{
+	padding: 10px;
+	border: 1px solid #cecece;
+	border-radius: 3px;
+	outline: none;
+	width: 15%;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+/*+-----------------+*/
+/*|                 |*/
+/*|  3   Knapper    |*/
+/*|                 |*/
+/*+-----------------+*/
+
+.btnFull {
+	padding: 12px;
+	width: 100%;
+	margin: 10px 0;
+	border-radius: 2px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.14);
+}
+
+/*Grønn knapp (positive knapper)*/
+.greenBtn { background: #2ecc71; }
+.greenBtn:active, .greenBtn:hover {background: #27ae60; }
+
+/*Grå knapp, andre knapper*/
+.grayBtn { background: #aaa; }
+.grayBtn:active, .grayBtn:hover { background: #868686; }
+
+/*+-----------------+*/
+/*|                 |*/
+/*|  4   Bredder    |*/
+/*|                 |*/
+/*+-----------------+*/
+.percent10 { width: 10% !important;}
+.percent25 { width: 10% !important;}
+.percent50 { width: 50% !important;}
+
+/*+-----------------+*/
+/*|                 |*/
+/*|4 Padding/Margin |*/
+/*|                 |*/
+/*+-----------------+*/
+
+.margin10Full {margin:10px;}
+.margin10Top {margin: 10px 0 0 0}
+.margin10Bot {margin: 0 0 10px 0}
