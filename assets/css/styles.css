@@ -94,7 +94,7 @@ input[type="number"]{
 /*|  4   Bredder    |*/
 /*|                 |*/
 /*+-----------------+*/
-.percent10 { width: 10% !important;}
+.percent10 { width: 100px !important;}
 .percent25 { width: 10% !important;}
 .percent50 { width: 50% !important;}
 
