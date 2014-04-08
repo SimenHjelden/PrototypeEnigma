@@ -40,6 +40,8 @@
 				txtPwd.style.display = "none";
 				repeatPwd.style.display = "none";
 				txtRepeatPwd.style.display = "none";
+				txtPwd.value = "";
+				txtRepeatPwd.value = "";
 				}
 		}
 		
