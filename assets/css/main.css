@@ -71,7 +71,7 @@ body{ background-color: #ecf0f1;	 }
 	width: 33%;
 }
 
-#pwd, #repeatPwd, #txtPwd, #txtRepeatPwd{
+#pwd, #repeatPwd, #txtPwd, #txtRepeatPwd, #pwdInfo{
 	display:none;
 } 
 
