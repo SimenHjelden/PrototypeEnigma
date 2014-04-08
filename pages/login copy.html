@@ -16,15 +16,22 @@
         <h1>Logg inn</h1>
     </header>
     <section id="mainContent">
-    	<label>Brukernavn<br />
-			<input id="username" type="text">
-		</label><br />
-		<label>Passord<br />
-			<input id="password" type="password">
-		</label><br />
+    
+    	<div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+          <input class="form-control" type="text" placeholder="Email address">
+        </div>
+ 		<div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          <input class="form-control" type="password" placeholder="Password">
+        </div>       
+        
 		<input class="greenBtn btnFull" type="button" value="Logg inn">
 		<input type="button" class="grayBtn btnFull" value="Registrer deg">
-		<a href="forgot-pw.html">Glemt passord</a>
+		<br><br>
+		<a id="alone-link" href="forgot-pw.html"><i class="fa fa-question"></i><span> Glemt passord</span></a>
+		
+        </div>
     </section>
 </section>
 <script src="../assets/js/enigma.js"></script>
