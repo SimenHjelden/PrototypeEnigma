@@ -11,3 +11,24 @@ function initialize() {
 
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+var currentPosLat;
+
+var timer = function(){
+  //alert("hello world");
+  
+  setTimeout(function() {
+    navigator.geolocation.getCurrentPosition(function(position){
+      alert(position.coords.latitude);
+    });
+    setTimeout(function() {
+      timer;
+    }, 500);
+  }, 500);
+}
+
+(function(){
+  
+  window.onload = timer;
+
+})();
