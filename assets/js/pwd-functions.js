@@ -23,8 +23,8 @@
 	var setEventHandlers = function()
 	{	
 		if(checkPwd != null){checkPwd.addEventListener("change", checkedPwd, false); }
-		txtPwd.addEventListener("change", pwdMatch, false);
-		txtRepeatPwd.addEventListener("change", pwdMatch, false);
+		txtPwd.addEventListener("focus", pwdMatch, false);
+		txtRepeatPwd.addEventListener("focus", pwdMatch, false);
 	}
 	 
 	 
@@ -51,7 +51,7 @@
 					}
 					else if(txtPwd.value != txtRepeatPwd.value){
 						txtPwd.style.borderColor = "#c0392b";
-						txtRepeatPwd.style.border = "#c0392b";	
+						txtRepeatPwd.style.borderColor = "#c0392b";	
 					}
 			}
 		}
