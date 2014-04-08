@@ -2,7 +2,7 @@
 
 (function(){
 	 
-	 var txtPwd, txtRepeatPwd, pwd, repeatPwd, checkPwd;
+	 var txtPwd, txtRepeatPwd, pwdInfo, pwd, repeatPwd, checkPwd;
 	 
 	 function init(){
 		 setObjects();
@@ -14,6 +14,7 @@
 		// Elements
 		txtPwd = document.getElementById("txtPwd");
 		txtRepeatPwd = document.getElementById("txtRepeatPwd");
+		pwdInfo = document.getElementById("pwdInfo");
 		pwd = document.getElementById("pwd");
 		repeatPwd = document.getElementById("repeatPwd");
 		checkPwd = document.getElementById("checkPwd");
@@ -34,12 +35,14 @@
 			txtPwd.style.display = "block";
 			repeatPwd.style.display = "block";
 			txtRepeatPwd.style.display = "block";
+			pwdInfo.style.display = "block";
 			}
 			else{
 				pwd.style.display = "none";
 				txtPwd.style.display = "none";
 				repeatPwd.style.display = "none";
 				txtRepeatPwd.style.display = "none";
+				pwdInfo.style.display = "none";
 				txtPwd.value = "";
 				txtRepeatPwd.value = "";
 				}
