@@ -73,7 +73,36 @@ body{ background-color: #ecf0f1;	 }
 
 #pwd, #repeatPwd, #txtPwd, #txtRepeatPwd{
 	display:none;
-} 
+}
+
+/* Lists */
+ul.listModule li {
+	padding: 10px;
+	border-top: solid 1px #FFF;
+	border-bottom: solid 1px #CCC;
+}
+ul.listModule li:hover {
+	background-color: #efefef;
+	border-bottom: solid 1px #FFF;
+	border-top: solid 1px #CCC;
+	cursor: pointer;
+}
+ul.listModule li:hover h4 {
+	text-decoration: underline;
+}
+ul.listModule li h4, ul.listModule li i {
+	display: inline-block;
+}
+.listActions {
+	float: right;
+}
+.listActions a {
+	color: #777;
+	margin-left: 10px;
+}
+.listActions a:hover {
+	color: #000;
+}
 
 .margin{ margin-top: 4em; }
 
