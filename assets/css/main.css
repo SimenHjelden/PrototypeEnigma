@@ -104,6 +104,15 @@ ul.listModule li h4, ul.listModule li i {
 	color: #000;
 }
 
+/* Tables */
+tbody tr:hover {
+	background-color: #FFF;
+	cursor: pointer;
+}
+tbody tr td:hover {
+	text-decoration: underline;
+}
+
 .margin{ margin-top: 4em; }
 
 #mainMenu{ width: 100%; margin: auto; }

@@ -90,6 +90,10 @@ input[type="number"]{
 .grayBtn { background: #aaa; }
 .grayBtn:active, .grayBtn:hover { background: #868686; }
 
+/*Grå knapp, andre knapper*/
+.redBtn { background: #e74c3c; }
+.redBtn:active, .redBtn:hover { background: #c0392b; }
+
 /*+-----------------+*/
 /*|                 |*/
 /*|  4   Bredder    |*/
