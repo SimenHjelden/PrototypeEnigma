@@ -11,6 +11,7 @@
 	{
 		setObjects();
 		setEventHandlers();
+		getCookie();
 	}
 
 	var setObjects = function()
@@ -32,10 +33,25 @@
 
 	var setEventHandlers = function()
 	{	
-		if(checkPwd != null){checkPwd.addEventListener("change", checkedPwd, false); }
-		if(loginBtn!=null){ loginBtn.addEventListener("click", login, false); }
-		if(regBtn!=null){ regBtn.addEventListener("click", function(){goTo(mainPage);}, false); }
-		if(backBtn!=null){ backBtn.addEventListener("click", function(){history.go(-1);}, false); }
+
+		if(loginBtn != null)
+			{
+				loginBtn.addEventListener("click", login, false);
+			}
+		if(regBtn != null)
+			{
+				regBtn.addEventListener("click", function()
+					{
+						goTo(mainPage);
+					}, false);
+			}
+		if(backBtn != null)
+			{
+				backBtn.addEventListener("click", function()
+					{
+						history.go(-1);
+					}, false);
+			}
 	}
 
 	var login = function()
@@ -50,6 +66,18 @@
 	}
 	
 	
+	var getCookie = function()
+	{
+		if(document.cookie)
+		{
+			//alert("Cookie finnes " + document.cookie);
+		} 
+		else 
+		{
+			//alert("Cookie finnes ikke");
+		}
+	}
+
 	window.onload = init;
 
 })();
