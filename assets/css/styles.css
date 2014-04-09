@@ -111,3 +111,8 @@ input[type="number"]{
 .margin10Full {margin:10px !important;}
 .margin10Top {margin: 10px 0 0 0}
 .margin10Bot {margin: 0 0 10px 0}
+
+/*	5	ICONS	*/
+i{
+font-size:1.6em;
+}
