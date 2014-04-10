@@ -18,24 +18,39 @@
     <section id="mainContent">
         <input id="backBtn" class="btnFull darkGrey width100 margin10Bot" type="button" value="Tilbake">
         <br>
-    	<label>Tittel</label><br/>
-        <input id="title" type="text">
-        <label>Beskrivelse</label><br/>
-        <input id="" type="text">
-        <label>Passord</label>
-        <input id="checkPwd" type="checkbox">
-        <br/>
-        <br/>
-        <label id="pwd">Passord</label>
-        <input id="txtPwd" type="password">
+        
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-font fa-fw"></i></span>
+          <input id="title" class="form-control" type="text" placeholder="Tittel">
+        </div>
+        
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
+          <input id="beskrivelse" class="form-control" type="text" placeholder="Beskrivelse">
+        </div>
+		
+		<div id="switchBtn">
+			<p>Ja</p>
+			
+			<div id="toggler"></div>
+			<p>Nei</p>
+			
+		</div>
+		
+        <div id="showPassField" class="displayNone">
+        <br>
         <p id="pwdInfo">Passord brukes om man ønsker og opprette en lukket privat rebus</p>
-         <br/>
-        <label id="repeatPwd">Gjenta Passord</label>
-        <input id="txtRepeatPwd" type="password">
-        <br/>
-        <label>Maks Antall Lag:</label>
-        <input id="maxTeam" type="number">
-        <br/>
+        <br>
+	      <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtPwd" class="form-control" type="text" placeholder="Passord">
+          </div>
+          <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtRepeatPwd" class="form-control" type="text" placeholder="Gjenta passord">
+          </div>
+          <br>
+        </div>
         <br/>
         <label>Tidsperiode</label>
         <br/>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Enigma - kart</title>
+<title>Enigma - logg inn</title>
 <link rel="stylesheet" href="../assets/css/main.css">
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
@@ -13,16 +13,18 @@
 <section id="enigma">
 	<header id="mainHeader">
     	<a href="main.html"><img src="../assets/img/logo2.png" id="logo" alt="ENIGMA-logo"></a>
-        <h1>Rebusnavn</h1>
-        <button id="backBtn" class="btnFull darkGrey width100 margin10Bot">tilbake</button>
+        <h1>Logg inn</h1>
     </header>
     <section id="mainContent">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ5gPYsHuFxrNWf2qk_K-nXoq7I9G6EI0&sensor=false">
-    </script>
-    <script src="../assets/js/gMap.js"></script>
-    	<section id="map">
-    		<div id="map-canvas"/>
-    	</section>
+    	<label>Brukernavn<br />
+			<input id="username" type="text">
+		</label><br />
+		<label>Passord<br />
+			<input id="password" type="password">
+		</label><br />
+		<input id="loginBtn" class="greenBtn btnFull" type="button" value="Logg inn">
+		<input  type="button" class="grayBtn btnFull" value="Registrer deg" onclick="javascript:location.href='reg.html'">
+		<a href="forgot-pw.html">Glemt passord</a>
     </section>
 </section>
 <script src="../assets/js/enigma.js"></script>

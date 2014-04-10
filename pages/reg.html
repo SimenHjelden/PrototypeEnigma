@@ -16,18 +16,22 @@
         <h1>Registrer</h1>
     </header>
     <section id="mainContent">
-    <input id="tilbake" type="button" value="Tilbake">
+   <button id="backBtn" class="btnFull darkGrey width100 margin10Bot">tilbake</button>
     <br/>
-    	<label>Brukernavn<br />
-			<input id="username" type="text">
-		</label><br />
-		<label>Passord<br />
-			<input id="password" type="password">
-		</label><br />
-		<label>Gjennta passord<br />
-			<input id="password" type="password">
-		</label><br />
-		<input class="grayBtn btnFull" type="button" value="Registrer deg">
+    	<div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+          <input class="form-control" type="text" placeholder="Brukernavn">
+        </div>
+ 		<div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          <input class="form-control" type="password" placeholder="Passord">
+        </div> 	
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          <input class="form-control" type="password" placeholder="Gjenta passord">
+        </div> 		
+        <button type="button" class="grayBtn btnFull">Registrer deg</button>
+		<br><br>
     </section>
 </section>
 <script src="../assets/js/enigma.js"></script>

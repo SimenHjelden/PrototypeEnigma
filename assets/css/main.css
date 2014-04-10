@@ -19,14 +19,11 @@ body{ background-color: #ecf0f1;	 }
 /*+-----------------+*/
 
 #mainHeader {
-	background-color: #cbd0d3;/* #34495e */
+	background-color: #cbd0d3;
 	overflow: auto;	
 	color: #34495e;
 	height: 75px;
 	text-align: center;
-/*
-	text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
-*/
 }
 #mainHeader h1{
 	font-size:1.2em;
@@ -71,10 +68,6 @@ body{ background-color: #ecf0f1;	 }
 	float: left;
 	width: 33%;
 }
-/*Password elements used in pw-functions.js and reg-rebus, reg-team*/
-#pwd, #repeatPwd, #txtPwd, #txtRepeatPwd, #pwdInfo{
-	display:none;
-}
 
 /*Elements for search in attend-rebus file*/
 #txtSearch{
@@ -86,7 +79,11 @@ body{ background-color: #ecf0f1;	 }
 	margin:0px 10px 0px 0px;
 }
 
-/* Lists */
+/*+-----------------+*/
+/*|                 |*/
+/*|   	 Lists 	    |*/
+/*|                 |*/
+/*+-----------------+*/
 ul.listModule li {
 	padding: 10px;
 	border-top: solid 1px #FFF;
@@ -115,7 +112,11 @@ ul.listModule li h4, ul.listModule li i {
 	color: #000;
 }
 
-/* Tables */
+/*+-----------------+*/
+/*|                 |*/
+/*|   	Tables 	    |*/
+/*|                 |*/
+/*+-----------------+*/
 tbody tr:hover {
 	background-color: #FFF;
 	cursor: pointer;
@@ -151,12 +152,16 @@ tbody tr td:hover {
 	width: 100%;
 	height: 500px;
 }
-/*TEST*/
+/*+-----------------+*/
+/*|                 |*/
+/*|   	Inputs 	    |*/
+/*|                 |*/
+/*+-----------------+*/
 
 .input-group {
 	position: relative;
-display: table;
-border-collapse: separate;
+	display: table;
+	border-collapse: separate;
 }
 .input-group-addon:first-child {
     border-right: 0
@@ -186,29 +191,21 @@ border-collapse: separate;
 	display: block;
 	width: 100%;
 	margin: 0 !important;
-	height: 34px;
+	height: 50px;
 	padding: 6px 12px;
 	font-size: 14px;
-	line-height: 1.428571429;
+	line-height: 30px;
 	color: #555;
 	vertical-align: middle;
 	background-color: #fff;
 	border: 1px solid #ccc;
 	border-radius: 0 4px 4px 0 !important;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	-webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0.075);
+
 }
 #alone-link {
-	margin-top: 10px;
-	background: white;
-	padding: 12px;
-	border-radius: 3px;
-	color: #555;
-	font-weight: 100;
-	border: 1px solid #c0c0c0
-}
-#alone-link span {
-	margin-left: 10px;
+	text-align: center;
+	width: 100%;
+	display: block;
+	color: #2c3e50;
 }

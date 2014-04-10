@@ -18,6 +18,7 @@
 		pwd = document.getElementById("pwd");
 		repeatPwd = document.getElementById("repeatPwd");
 		checkPwd = document.getElementById("checkPwd");
+		pwedBlock = document.getElementById("showPassField");
 
 	}
 	
@@ -30,7 +31,8 @@
 	 
 	 
 	 var checkedPwd = function(){
-		if(checkPwd.checked){
+		if(checkPwd.click){
+			pwedBlock.style.display = "block";
 			pwd.style.display = "block";
 			txtPwd.style.display = "block";
 			repeatPwd.style.display = "block";
@@ -38,6 +40,7 @@
 			pwdInfo.style.display = "block";
 			}
 			else{
+				pwedBlock.style.display = "none";
 				pwd.style.display = "none";
 				txtPwd.style.display = "none";
 				repeatPwd.style.display = "none";

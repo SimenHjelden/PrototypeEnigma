@@ -3,7 +3,7 @@
 	// Elements
 	var container;
 	// Buttons
-	var loginBtn, regBtn, backBtn;
+	var loginBtn, regBtn, backBtn, switchBtn = {};
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage;
 
@@ -23,6 +23,10 @@
 		loginBtn = document.getElementById("loginBtn");
 		regBtn = document.getElementById("regBtn");
 		backBtn = document.getElementById("tilbake");
+		switchBtn.div = document.getElementById("switchBtn");
+		switchBtn.toggler = document.getElementById("toggler")
+		switchBtn.on = false;
+		
 
 		// PageUrls
 		loginPage = "login.html";
@@ -52,8 +56,32 @@
 						history.go(-1);
 					}, false);
 			}
+		if(switchBtn.div != null)
+			{
+				switchBtn.div.addEventListener("click", function()
+					{
+						toggleBtn();
+						
+					}, false);
+			}
 	}
+	var toggleBtn = function()
+	{
+		if(!switchBtn.on) 
+		{
+			switchBtn.toggler.style.marginLeft="0px";
+			switchBtn.toggler.style.left="0px";
+			pwedBlock.style.display = "none";
+			switchBtn.on = true;
+		}
+		else
+		{
+			switchBtn.toggler.style.marginLeft="52px";
+			pwedBlock.style.display = "block";
+			switchBtn.on = false;
 
+		}
+	}
 	var login = function()
 	{
 		// Do loginmagic
@@ -78,6 +106,7 @@
 		}
 	}
 
-	window.onload = init;
+
+	window.onload = init();
 
 })();

@@ -3,6 +3,7 @@
 * 2: Inputs
 * 3: Knapper
 * 4: Bredder
+* 5: Display
 */
 
 /*+-----------------+*/
@@ -65,6 +66,61 @@ input[type="number"]{
 	font-size: 14px;
 }
 
+/*For radiobuttons og checkbox*/
+
+.checkbox label {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	padding-left: 45px;
+	margin-right: 15px;
+	line-height: 30px;
+	font-size: 18px;
+}
+input[type=radio],
+input[type=checkbox] {
+	display: none;
+}
+.checkbox label:before {
+	content: "";
+	display: inline-block;
+	margin-right: 20px;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	background-color: #aaa;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+.radio label:before {
+	border-radius: 50%;
+}
+.checkbox label {
+	margin: 10px 0 10px 0;
+}
+.checkbox label:before {
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+input[type=checkbox]:checked + label:before {
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 25px;
+	color: #f3f3f3;
+	text-align: center;
+    line-height: 30px;
+}
 /*+-----------------+*/
 /*|                 |*/
 /*|  3   Knapper    |*/
@@ -78,9 +134,54 @@ input[type="number"]{
 	border-radius: 2px;
 	color: white;
 	border: none;
+	font-size: 16px;
 	cursor: pointer;
 	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.14);
+	text-shadow:  0px -1px 1px rgba(0,0,0,0.3); 
 }
+
+/*toggle*/
+#switchBtn {
+	width: 104px;
+	height: 44px;
+	line-height: 44px;
+	background-color: #fff;
+	border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+	
+}
+
+#switchBtn div {
+	width: 52px;
+	height: 44px;
+	background: #c4c4c4;	
+	position: absolute;
+	z-index: 2;
+	box-shadow: inset 0px 0px 6px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+	transition: all 0.3s;
+	
+}
+
+#switchBtn p {
+	position: absolute;
+	font-size: 18px;
+	z-index: 1;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+	color:white;
+	width: 52px;
+	text-align: center;
+}
+#switchBtn p:first-child {
+	background: #2ecc71;
+	border-radius: 3px 0 0 3px;
+}
+#switchBtn p:last-child {
+	right: 0px;
+	border-radius: 0 3px 3px 0;
+	background: #e74c3c;
+}
+
 
 /*Grønn knapp (positive knapper)*/
 .greenBtn { background: #2ecc71; }
@@ -111,3 +212,14 @@ input[type="number"]{
 .margin10Full {margin:10px !important;}
 .margin10Top {margin: 10px 0 0 0}
 .margin10Bot {margin: 0 0 10px 0}
+.marginTop0 {margin-top: 0;}
+
+/*+-----------------+*/
+/*|                 |*/
+/*| 5   Display     |*/
+/*|                 |*/
+/*+-----------------+*/
+
+.displayNone {
+	display: none;
+}
