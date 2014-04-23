@@ -22,7 +22,7 @@
 		// Buttons
 		loginBtn = document.getElementById("loginBtn");
 		regBtn = document.getElementById("regBtn");
-		backBtn = document.getElementById("tilbake");
+		backBtn = document.getElementById("backBtn");
 		switchBtn.div = document.getElementById("switchBtn");
 		switchBtn.toggler = document.getElementById("toggler")
 		switchBtn.on = false;
