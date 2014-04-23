@@ -145,12 +145,58 @@ tbody tr td:hover {
 
 /*+-----------------+*/
 /*|                 |*/
+/*|     Loading     |*/
+/*|                 |*/
+/*+-----------------+*/
+.ui-loading .ui-loader {
+display: block;
+}
+.ui-loader-default {
+background: 0;
+filter: Alpha(Opacity=18);
+opacity: .18;
+width: 2.875em;
+height: 2.875em;
+margin-left: -1.4375em;
+margin-top: -1.4375em;
+}
+.ui-loader {
+z-index: 0;
+position: fixed;
+top: 50%;
+left: 50%;
+border: 0;
+}
+.ui-loader .ui-icon-loading {
+background-color: #000;
+display: block;
+margin: 0;
+width: 2.75em;
+height: 2.75em;
+padding: .0625em;
+-webkit-border-radius: 2.25em;
+border-radius: 2.25em;
+}
+.ui-icon-loading {
+background: url(../img/ajax-loader.gif);
+background-size: 2.875em 2.875em;
+}
+.ui-loader h1 {
+	margin-left: -70%;
+}
+
+/*+-----------------+*/
+/*|                 |*/
 /*|   	  Map 	    |*/
 /*|                 |*/
 /*+-----------------+*/
 #map-canvas {
 	width: 100%;
 	height: 500px;
+}
+#map #map-canvas {
+	width: 100%;
+	height: 300px;
 }
 /*+-----------------+*/
 /*|                 |*/
@@ -162,6 +208,11 @@ tbody tr td:hover {
 	position: relative;
 	display: table;
 	border-collapse: separate;
+}
+.input-group input[type=radio], .input-group input[type=checkbox]{
+	display: inline-block;
+	margin-right: 10px;
+	margin-top: 10px;
 }
 .input-group-addon:first-child {
     border-right: 0

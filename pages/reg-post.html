@@ -26,8 +26,21 @@
 
         <div class="input-group margin-bottom-sm">
           <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
-          <input id="beskrivelse" class="form-control" type="text" placeholder="Type">
+          <TEXTAREA id="beskrivelse" class="form-control" type="text" rows="20" cols="80" placeholder="Beskrivelse"></TEXTAREA>
         </div>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ5gPYsHuFxrNWf2qk_K-nXoq7I9G6EI0&sensor=false">
+        </script>
+        <script src="../assets/js/gMap.js"></script>
+          <section id="map">
+            <div id="map-canvas"/>
+          </section>
+
+        <ul class="input-group">
+          <li><input type="radio" name="post-type" value="Flervalg">Flervalg</li>
+          <li><input type="radio" name="post-type" value="Spørsmål/Svar">Spørsmål/Svar</li>
+          <li><input type="radio" name="post-type" value="Fysisk">Fysisk</li>
+        </ul>
 		
     <label>Aktiv</label>
 		<div id="switchBtn">
@@ -37,16 +50,34 @@
 			<p>Nei</p>
 			
 		</div>
-
-        <label>Tidsperiode</label>
-        <br/>
-        <input id="startDate" type="date">
-        <input id="endDate" type="date">
         <button id="createEnigmaBtn" type="submit" class="btnFull greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett rebus</button>
 
     </section>
 </section>
+<script src="../assets/js/jquery-1.11.0.js"></script>
 <script src="../assets/js/enigma.js"></script>
 <script src="../assets/js/pwd-functions.js"></script>
+<script src="../assets/js/jquery.mobile-1.4.2.min.js"></script>
+<script>
+  $( document ).on( "click", ".show-page-loading-msg", function() {
+    var $this = $( this ),
+        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+        textonly = !!$this.jqmData( "textonly" );
+        html = $this.jqmData( "html" ) || "";
+    $.mobile.loading( "show", {
+            text: msgText,
+            textVisible: textVisible,
+            theme: theme,
+            textonly: textonly,
+            html: html
+    });
+  })
+  .on( "click", ".hide-page-loading-msg", function() {
+      $.mobile.loading( "hide" );
+  });
+</script>
+<script src="../assets/js/enigma.js"></script>
 </body>
 </html>

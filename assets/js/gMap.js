@@ -6,29 +6,50 @@ function initialize() {
   };
   var map = new google.maps.Map(document.getElementById("map-canvas"),
     mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: map.getCenter(),
+    map: map,
+    title: 'Click to zoom'
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    map.setZoom(8);
+    map.setCenter(marker.getPosition());
+  });
+
+  google.maps.event.addListenerOnce(map, 'idle', function(){
+    // do something only the first time the map is loaded
+      $(".ui-loader").remove();
+  });
  });
-
-
+ 
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-var currentPosLat;
 
+
+
+var currentPosLat;
+/*
 var timer = function(){
   //alert("hello world");
+  //timer;
   
   setTimeout(function() {
     navigator.geolocation.getCurrentPosition(function(position){
       alert(position.coords.latitude);
     });
     setTimeout(function() {
-      timer;
+      
     }, 500);
   }, 500);
+  
 }
 
 (function(){
   
-  window.onload = timer;
+  //window.onload = timer;
 
 })();
+*/
