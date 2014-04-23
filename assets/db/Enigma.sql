@@ -65,7 +65,7 @@ CREATE  TABLE IF NOT EXISTS `Enigma`.`POST` (
   `PostTittel` VARCHAR(45) NOT NULL ,
   `lang` FLOAT(6) NOT NULL ,
   `long` FLOAT(6) NOT NULL ,
-  `PostType` ENUM('spm', 'mulitple') NOT NULL ,
+  `PostType` ENUM('spm', 'mulitple','fysisk') NOT NULL ,
   `REBUS_Id` INT NOT NULL ,
   PRIMARY KEY (`Id`) ,
   INDEX `fk_POST_REBUS1_idx` (`REBUS_Id` ASC) ,
