@@ -16,7 +16,7 @@
         <h1>Opprett Post</h1>
     </header>
     <section id="mainContent">
-        <input id="backBtn" class="btnFull darkGrey width100 margin10Bot" type="button" value="Tilbake">
+        <button id="backBtn" class="btnFull darkGrey width100 margin10Bot" type="button">Tilbake</button>
         <br>
         
         <div class="input-group margin-bottom-sm">
@@ -36,21 +36,27 @@
             <div id="map-canvas"/>
           </section>
 
-        <ul class="input-group">
-          <li><input type="radio" name="post-type" value="Flervalg">Flervalg</li>
-          <li><input type="radio" name="post-type" value="Spørsmål/Svar">Spørsmål/Svar</li>
-          <li><input type="radio" name="post-type" value="Fysisk">Fysisk</li>
-        </ul>
-		
-    <label>Aktiv</label>
-		<div id="switchBtn">
-			<p>Ja</p>
-			
-			<div id="toggler"></div>
-			<p>Nei</p>
-			
-		</div>
-        <button id="createEnigmaBtn" type="submit" class="btnFull greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett rebus</button>
+        <div style="width: 100%; margin: auto;">
+          <ul class="input-group" style="margin-top: 10px; float:left; list-style: none;">
+            <label>Type</label>
+            <li><input type="radio" name="post-type" value="Flervalg">Flervalg</li>
+            <li><input type="radio" name="post-type" value="Spørsmål/Svar">Spørsmål/Svar</li>
+            <li><input type="radio" name="post-type" value="Fysisk">Fysisk</li>
+          </ul>
+      
+          <div class="input-group margin-bottom-sm" style="margin-top: 10px; float: right; ">
+            <label>Aktiv Post</label>
+            <div id="switchBtn">
+              <p>Ja</p>
+              
+              <div id="toggler"></div>
+              <p>Nei</p>
+              
+            </div>
+          </div>
+        </div>
+    
+        <button id="createEnigmaBtn" type="submit" class="btnFull greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett post</button>
 
     </section>
 </section>

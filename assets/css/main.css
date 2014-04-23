@@ -203,7 +203,9 @@ background-size: 2.875em 2.875em;
 /*|   	Inputs 	    |*/
 /*|                 |*/
 /*+-----------------+*/
-
+.ui-radio {
+	display: inline;
+}
 .input-group {
 	position: relative;
 	display: table;
@@ -259,4 +261,7 @@ background-size: 2.875em 2.875em;
 	width: 100%;
 	display: block;
 	color: #2c3e50;
+}
+#switchBtn {
+	cursor: pointer;
 }

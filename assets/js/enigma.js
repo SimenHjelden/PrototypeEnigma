@@ -1,7 +1,7 @@
 (function(){
 
 	// Elements
-	var container;
+	var container, pwedBlock;
 	// Buttons
 	var loginBtn, regBtn, backBtn, switchBtn = {};
 	// Pages
@@ -24,8 +24,9 @@
 		regBtn = document.getElementById("regBtn");
 		backBtn = document.getElementById("backBtn");
 		switchBtn.div = document.getElementById("switchBtn");
-		switchBtn.toggler = document.getElementById("toggler")
+		switchBtn.toggler = document.getElementById("toggler");
 		switchBtn.on = false;
+		pwedBlock = document.getElementById("showPassField");
 		
 
 		// PageUrls
@@ -71,13 +72,13 @@
 		{
 			switchBtn.toggler.style.marginLeft="0px";
 			switchBtn.toggler.style.left="0px";
-			pwedBlock.style.display = "none";
+			if(pwedBlock != null) {pwedBlock.style.display = "none";}
 			switchBtn.on = true;
 		}
 		else
 		{
 			switchBtn.toggler.style.marginLeft="52px";
-			pwedBlock.style.display = "block";
+			if(pwedBlock != null) {pwedBlock.style.display = "block";}
 			switchBtn.on = false;
 
 		}

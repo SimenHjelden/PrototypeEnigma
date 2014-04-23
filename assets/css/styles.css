@@ -212,7 +212,6 @@ input[type=checkbox]:checked + label:before {
 .margin10Full {margin:10px !important;}
 .margin10Top {margin: 10px 0 0 0}
 .margin10Bot {margin: 0 0 10px 0}
-<<<<<<< HEAD
 .marginTop0 {margin-top: 0;}
 
 /*+-----------------+*/
@@ -223,10 +222,8 @@ input[type=checkbox]:checked + label:before {
 
 .displayNone {
 	display: none;
-=======
 
 /*	5	ICONS	*/
 i{
 font-size:1.6em;
->>>>>>> FETCH_HEAD
 }
