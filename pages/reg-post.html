@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Enigma</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+</head>
+
+<body>
+<section id="enigma">
+	<header id="mainHeader">
+    	<a href="main.html"><img src="../assets/img/logo2.png" id="logo" alt="ENIGMA-logo"></a>
+        <h1>Opprett Post</h1>
+    </header>
+    <section id="mainContent">
+        <input id="backBtn" class="btnFull darkGrey width100 margin10Bot" type="button" value="Tilbake">
+        <br>
+        
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-font fa-fw"></i></span>
+          <input id="title" class="form-control" type="text" placeholder="Tittel">
+        </div>
+
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
+          <input id="beskrivelse" class="form-control" type="text" placeholder="Type">
+        </div>
+		
+    <label>Aktiv</label>
+		<div id="switchBtn">
+			<p>Ja</p>
+			
+			<div id="toggler"></div>
+			<p>Nei</p>
+			
+		</div>
+
+        <label>Tidsperiode</label>
+        <br/>
+        <input id="startDate" type="date">
+        <input id="endDate" type="date">
+        <button id="createEnigmaBtn" type="submit" class="btnFull greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett rebus</button>
+
+    </section>
+</section>
+<script src="../assets/js/enigma.js"></script>
+<script src="../assets/js/pwd-functions.js"></script>
+</body>
+</html>
