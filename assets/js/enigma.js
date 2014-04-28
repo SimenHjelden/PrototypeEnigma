@@ -12,6 +12,7 @@
 		setObjects();
 		setEventHandlers();
 		getCookie();
+		swipeHandlers();
 	}
 
 	var setObjects = function()
@@ -106,8 +107,16 @@
 			//alert("Cookie finnes ikke");
 		}
 	}
-
-
+		
+	var swipeHandlers = function(){
+			$(".listModule li").on("swipeleft", function(e){
+				var listitem = $(this);
+					listitem.addClass("swipeDelete");
+					alert("hello");
+					
+				});
+		}	
+		
 	window.onload = init();
 
 })();

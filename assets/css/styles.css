@@ -223,6 +223,7 @@ input[type=checkbox]:checked + label:before {
 .displayNone {
 	display: none;
 
+}
 /*	5	ICONS	*/
 i{
 font-size:1.6em;
