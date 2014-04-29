@@ -112,7 +112,7 @@
 			$(".listModule li").on("swipeleft", function(e){
 				var listitem = $(this);
 					listitem.addClass("swipeDelete");
-					alert("hello");
+					listitem.remove();
 					
 				});
 		}	
