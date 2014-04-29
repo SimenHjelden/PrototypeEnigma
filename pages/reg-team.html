@@ -16,23 +16,39 @@
         <h1>Opprett Lag</h1>
     </header>
     <section id="mainContent">
-        <button id="backBtn" class="btnFull darkGrey width100 margin10Bot">tilbake</button>
+        <button id="backBtn" class="btnFull darkGrey width100 margin10Bot">Tilbake</button>
         <br>
-    	<label>Lagnavn</label><br/>
-        <input id="title" type="text">
-        <br/>
-        <label>Passord</label>
-        <input id="checkPwd" type="checkbox">
-        <br/>
-        <br/>
-        <label id="pwd">Passord</label>
-        <input id="txtPwd" type="password">
-        <p id="pwdInfo">Passord brukes om man ønsker og opprette et privat lag</p>
-         <br/>
-        <label id="repeatPwd">Gjenta Passord</label>
-        <input id="txtRepeatPwd" type="password">
-        <br/>
-        <input class="grayBtn btnFull" type="button" value="Registrer Lag">
+        
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-font fa-fw"></i></span>
+          <input id="title" class="form-control" type="text" placeholder="Lagnavn">
+        </div>
+        
+		
+		<div id="switchBtn">
+			<p>Ja</p>
+			
+			<div id="toggler"></div>
+			<p>Nei</p>
+			
+		</div>
+		
+        <div id="showPassField" class="displayNone">
+        <br>
+        <p id="pwdInfo">Passord brukes om man ønsker å opprette et privat lag</p>
+        <br>
+	      <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtPwd" class="form-control" type="text" placeholder="Passord">
+          </div>
+          <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtRepeatPwd" class="form-control" type="text" placeholder="Gjenta passord">
+          </div>
+          <br>
+        </div>
+
+        <button id="createEnigmaBtn" type="submit" class="btnFull greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett lag</button>
 
     </section>
 </section>
