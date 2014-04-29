@@ -13,7 +13,17 @@
 		setEventHandlers();
 		getCookie();
 		swipeHandlers();
+		sjekkSession();
 	}
+	
+	var sjekkSession = function(){
+			if(document.cookie){
+				
+				}
+			else{
+				goTo(loginPage);
+				}
+		}
 
 	var setObjects = function()
 	{
