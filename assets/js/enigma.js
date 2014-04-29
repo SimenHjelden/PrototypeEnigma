@@ -3,7 +3,7 @@
 	// Elements
 	var container, pwedBlock;
 	// Buttons
-	var loginBtn, regBtn, backBtn, switchBtn = {};
+	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {};
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage;
 
@@ -32,6 +32,7 @@
 
 		// Buttons
 		loginBtn = document.getElementById("loginBtn");
+		logoutBtn = document.getElementById("logoutBtn");
 		regBtn = document.getElementById("regBtn");
 		backBtn = document.getElementById("backBtn");
 		switchBtn.div = document.getElementById("switchBtn");
@@ -76,6 +77,14 @@
 						
 					}, false);
 			}
+		if(logoutBtn != null)
+			{
+				logoutBtn.addEventListener("click", function()
+				{
+					slettCookie();
+					goTo(loginPage);
+				}, false);		
+			}
 	}
 	var toggleBtn = function()
 	{
@@ -97,7 +106,13 @@
 	var login = function()
 	{
 		// Do loginmagic
-		goTo(mainPage);
+		var username = document.getElementById("usrnInput");
+		var password = document.getElementById("passInput");
+		if(username.value === "root" && password.value === "root") {
+			lagCookie();
+			goTo(mainPage);
+		}
+		
 	}
 
 	var goTo = function(pageUrl)
@@ -119,13 +134,28 @@
 	}
 		
 	var swipeHandlers = function(){
-			$(".listModule li").on("swipeleft", function(e){
-				var listitem = $(this);
-					listitem.addClass("swipeDelete");
-					listitem.remove();
-					
-				});
-		}	
+		$(".listModule li").on("swipeleft", function(e){
+			var listitem = $(this);
+				listitem.addClass("swipeDelete");
+				listitem.remove();		
+		});
+	}
+
+	var lagCookie = function(){
+		var dato = new Date();
+		dato.setDate(dato.getDate() + 7);
+		//dato.setDate(dato.getHours() + 7);
+
+		document.cookie = "tall=" + 5 + ";expires=" + dato.toUTCString();
+	}
+
+	var slettCookie = function(){
+		var dato = new Date();
+		dato.setDate(dato.getDate() - antallDagerLevetid);
+		//dato.setDate(dato.getHours() + 7);
+
+		document.cookie = "tall=;expires=" + dato.toUTCString();
+	}
 		
 	window.onload = init();
 
