@@ -142,7 +142,7 @@
 	
 	
 	var removeLoading = function(){
-			if(currentPage === mapPage || currentPage === settingsPage || curentPage === addPostPage){
+			if(currentPage === mapPage || currentPage === settingsPage || curentPage === addPostPage || currentPage === editPostPage){
 			}
 			else{
 			$(document).on("pageshow", "[data-role='page']", function () {
