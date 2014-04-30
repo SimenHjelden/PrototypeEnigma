@@ -149,10 +149,13 @@
 	
 	
 	var removeLoading = function(){
-			if(currentPage != mapPage || currentPage != settingsPage || curentPage != addPostPage){
+			if(currentPage === mapPage || currentPage === settingsPage || curentPage === addPostPage){
+			}
+			else{
 			$(document).on("pageshow", "[data-role='page']", function () {
  			$('div.ui-loader').remove();
-			})}
+				}
+			)}
 	}
 	
 		
