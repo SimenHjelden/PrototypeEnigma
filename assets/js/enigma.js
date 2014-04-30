@@ -15,6 +15,7 @@
 		swipeHandlers();
 		sjekkSession();
 		removeLoading();
+		
 	}
 	
 	var sjekkSession = function(){
@@ -100,7 +101,7 @@
 				}, false);		
 			}
 				
-		
+		logo.addEventListener("click", logoRedirect, false); 
 	}
 
 	var toggleBtn = function()
@@ -150,6 +151,13 @@
 			)}
 	}
 	
+	var logoRedirect = function(){
+		if(currentPage !== mainPage)
+			goTo(mainPage);
+			else
+			logo.removeEventListener("click", logoRedirect(), false);	
+		
+		}
 	
 		
 	var swipeHandlers = function(){
