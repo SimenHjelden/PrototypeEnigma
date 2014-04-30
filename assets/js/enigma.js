@@ -142,11 +142,9 @@
 	}
 	
 	var removeLoading = function(){
-			if(currentPage ==! addPostPage ||currentPage ==! settingsPage || currentPage ==! mapPage){
 			$(document).on("pageshow", "[data-role='page']", function () {
  			$('div.ui-loader').hide();
 			})
-	}
 	}
 	
 		
