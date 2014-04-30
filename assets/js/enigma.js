@@ -13,6 +13,7 @@
 		setEventHandlers();
 		swipeHandlers();
 		sjekkSession();
+		removeLoading();
 	}
 	
 	var sjekkSession = function(){
@@ -144,9 +145,10 @@
 	}
 	
 	var removeLoading = function(){
+			if(currentPage != mapPage || currentPage != settingsPage || curentPage != addPostPage){
 			$(document).on("pageshow", "[data-role='page']", function () {
- 			$('div.ui-loader').hide();
-			})
+ 			$('div.ui-loader').remove();
+			})}
 	}
 	
 		
