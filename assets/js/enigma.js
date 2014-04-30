@@ -5,7 +5,7 @@
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage;
 
 	var init = function()
 	{
@@ -50,6 +50,9 @@
 		regPage = "reg.html";
 		forgotPwPage = "forgot-pw.html";
 		selectedTeamPage = "selected-team.html";
+		mapPage = "enigmaMap.html";
+		settingsPage = "settings.html";
+		addPostPage = "reg-post.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -136,6 +139,14 @@
 	var goTo = function(pageUrl)
 	{
 		window.location.assign(pageUrl);
+	}
+	
+	var removeLoading = function(){
+			if(currentPage ==! addPostPage ||currentPage ==! settingsPage || currentPage ==! mapPage){
+			$(document).on("pageshow", "[data-role='page']", function () {
+ 			$('div.ui-loader').hide();
+			})
+	}
 	}
 	
 		
