@@ -9,6 +9,7 @@
 
 	var init = function()
 	{
+		
 		setObjects();
 		setEventHandlers();
 		swipeHandlers();
@@ -143,6 +144,7 @@
 	{
 		window.location.assign(pageUrl);
 	}
+	
 	
 	var removeLoading = function(){
 			if(currentPage != mapPage || currentPage != settingsPage || curentPage != addPostPage){
