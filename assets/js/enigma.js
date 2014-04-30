@@ -13,14 +13,15 @@
 		setEventHandlers();
 		getCookie();
 		swipeHandlers();
-		sjekkSession();
+		
 	}
 	
 	var sjekkSession = function(){
 			if(document.cookie){
-				
+				alert("Cookie Finnes");
 				}
 			else{
+				alert("Cookie Finnes ikke");
 				goTo(loginPage);
 				}
 		}
@@ -59,7 +60,7 @@
 			{
 				regBtn.addEventListener("click", function()
 					{
-						goTo(mainPage);
+						goTo(regPage);
 					}, false);
 			}
 		if(backBtn != null)
@@ -110,8 +111,10 @@
 		var password = document.getElementById("passInput");
 		if(username.value === "root" && password.value === "root") {
 			lagCookie();
+			sjekkSession();
 			goTo(mainPage);
 		}
+		else{alert("Wrong username or password")}
 		
 	}
 
@@ -137,8 +140,14 @@
 		$(".listModule li").on("swipeleft", function(e){
 			var listitem = $(this);
 				listitem.addClass("swipeDelete");
-				listitem.remove();		
-		});
+				alert("Fuksjon som illustrerer sletting av element");	
+		},
+		$(".listModule li").on("swipeRight", function(e){
+				var listitem = $(this);
+				listitem.addClass("swipeEdit");
+				alert("Funksjon som illustrerer editering av et element");
+			})
+		);
 	}
 
 	var lagCookie = function(){
@@ -146,12 +155,14 @@
 		dato.setDate(dato.getDate() + 7);
 		//dato.setDate(dato.getHours() + 7);
 
-		document.cookie = "tall=" + 5 + ";expires=" + dato.toUTCString();
+		document.cookie = "tall=" + 4236 + ";expires=" + dato.toUTCString();
+		
 	}
 
 	var slettCookie = function(){
+		alert("Sletter cookie");
 		var dato = new Date();
-		dato.setDate(dato.getDate() - antallDagerLevetid);
+		dato.setDate(dato.getDate() - 7);
 		//dato.setDate(dato.getHours() + 7);
 
 		document.cookie = "tall=;expires=" + dato.toUTCString();
