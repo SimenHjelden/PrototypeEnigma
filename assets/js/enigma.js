@@ -1,7 +1,7 @@
 (function(){
 
 	// Elements
-	var container, pwedBlock;
+	var container, pwedBlock, logo;
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
@@ -44,6 +44,7 @@
 		switchBtn.toggler = document.getElementById("toggler");
 		switchBtn.on = false;
 		pwedBlock = document.getElementById("showPassField");
+		logo = document.getElementById("logo");
 		
 
 		// PageUrls
@@ -62,7 +63,8 @@
 
 	var setEventHandlers = function()
 	{	
-
+		
+		
 		if(loginBtn != null)
 			{
 				loginBtn.addEventListener("click", login, false);
@@ -97,19 +99,8 @@
 					goTo(loginPage);
 				}, false);		
 			}
-
-		/*
-		alert("93");
-		alert("94 : [ " + teamBtn + " ]");
-		if(teamBtn != null)
-			{
-				alert("teamBtn");
-				teamBtn.addEventListener("click", function()
-				{
-					alert("selected team");
-				}, false);
-			}
-		*/		
+				
+		
 	}
 
 	var toggleBtn = function()
@@ -129,6 +120,7 @@
 
 		}
 	}
+	
 	var login = function()
 	{
 		// Do loginmagic
@@ -157,6 +149,7 @@
 				}
 			)}
 	}
+	
 	
 		
 	var swipeHandlers = function(){
