@@ -139,7 +139,19 @@
 				var listitem = $(this);
 				listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
-			})
+			}),
+			
+		$(".listActions .fa-pencil").click(function(e){
+				var listitem = $(this).closest("li");
+				listitem.addClass("swipeEdit");
+				alert("Funksjon som illustrerer editering av et element");
+			}),
+			
+		$(".listActions .fa-trash-o").click(function(e){
+				var listitem = $(this).closest("li");
+				listitem.addClass("swipeDelete");
+				alert("Funksjon som illustrerer editering av et element");
+			})			
 	}
 	
 	var lagCookie = function(){
