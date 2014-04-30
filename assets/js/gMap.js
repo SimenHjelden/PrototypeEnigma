@@ -21,17 +21,19 @@ function initialize() {
     });
 
     
-    if("#map-canvas" != null) {
+
       //Remove ui-loader when done loading
       google.maps.event.addListenerOnce(map, 'idle', function(){
         // do something only the first time the map is loaded
           $(".ui-loader").remove();
       });
-    } else {
-      $(".ui-loader").remove();
-    }
+    
 
  });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+if($("#map-canvas") != null) {
+  google.maps.event.addDomListener(window, 'load', initialize);
+} else {
+      $(".ui-loader").remove();
+}
