@@ -75,6 +75,7 @@ body{ background-color: #ecf0f1;	 }
 }
 
 .checkAttend{
+	
 	float:right;
 	margin:0px 10px 0px 0px;
 }
@@ -89,15 +90,18 @@ ul.listModule li {
 	border-top: solid 1px #FFF;
 	border-bottom: solid 1px #CCC;
 }
+
 ul.listModule li:hover {
 	background-color: #efefef;
 	border-bottom: solid 1px #FFF;
 	border-top: solid 1px #CCC;
 	cursor: pointer;
 }
-ul.listModule li:hover h4 {
+
+ul.listModule li:hover h4{
 	text-decoration: underline;
 }
+
 ul.listModule li h4, ul.listModule li i {
 	display: inline-block;
 }
