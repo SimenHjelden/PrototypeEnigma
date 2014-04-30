@@ -5,7 +5,7 @@
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {};
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage;
+	var loginPage, regPage, mainPage, forgotPwPage, currentPage;
 
 	var init = function()
 	{
@@ -13,7 +13,6 @@
 		setEventHandlers();
 		swipeHandlers();
 		sjekkSession();
-		
 	}
 	
 	var sjekkSession = function(){
@@ -22,7 +21,9 @@
 				}
 			else{
 				alert("Cookie Finnes ikke");
-				goTo(loginPage);
+					if(currentPage != loginPage) {
+						goTo(loginPage);
+					}
 				}
 		}
 
@@ -47,6 +48,7 @@
 		mainPage = "main.html";
 		regPage = "reg.html";
 		forgotPwPage = "forgot-pw.html";
+		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
 	var setEventHandlers = function()
