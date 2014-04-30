@@ -87,7 +87,9 @@
 					goTo(loginPage);
 				}, false);		
 			}
+			
 	}
+
 	var toggleBtn = function()
 	{
 		if(!switchBtn.on) 
