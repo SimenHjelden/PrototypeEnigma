@@ -17,8 +17,7 @@
 	}
 	
 	var sjekkSession = function(){
-			var tall = lagCookie("tall");
-			if(tall != "" || tall != 0){
+			if(document.cookie){
 				alert("Cookie Finnes");
 				}
 			else{
