@@ -6,7 +6,7 @@
 <title>Enigma</title>
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="file:///C|/Users/Simen/Desktop/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -20,15 +20,20 @@
     <section id="mainContent">
     	<button id="backBtn" class="btnFull darkGrey width100 margin10Bot">Tilbake</button>
     	<br>
-    	<label>Endre Brukernavn</label>
-        <br/>
-        <input id="username" type="text"> 
-        <label>Passord</label>
-        <br/>
-        <input id="Pwd" type="text"> 
-        <label>Gjenta Passord</label>
-        <br/>
-        <input id="RepeatPwd" type="text">
+    	<div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+          	<input id="txtPwd" class="form-control" type="text" placeholder="Endre brukernavn">
+        </div>
+
+        <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtPwd" class="form-control" type="text" placeholder="Endre passord">
+        </div>
+        
+        <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtPwd" class="form-control" type="text" placeholder="Skriv passord igjen">
+        </div>
         <label>Søkeradius</label> 
         <br/>
         <input id="radius" type="range" min="2" max="500" >
@@ -46,6 +51,36 @@
 <script src="../assets/js/jquery.mobile-1.4.2.js"></script>
 <script src="../assets/js/enigma.js"></script>
 <script src="../assets/js/pwd-functions.js"></script>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<script src="../assets/js/jquery.mobile-1.4.2.min.js"></script>
+<!--
+<script>
+  $( document ).on( "click", ".show-page-loading-msg", function() {
+    var $this = $( this ),
+        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+        textonly = !!$this.jqmData( "textonly" );
+        html = $this.jqmData( "html" ) || "";
+    $.mobile.loading( "show", {
+            text: msgText,
+            textVisible: textVisible,
+            theme: theme,
+            textonly: textonly,
+            html: html
+    });
+  })
+  .on( "click", ".hide-page-loading-msg", function() {
+      $.mobile.loading( "hide" );
+  });
+</script>
+-->
+=======
 <script src="../assets/js/gMap.js"></script>
+>>>>>>> FETCH_HEAD
+=======
+<script src="../assets/js/gMap.js"></script>
+>>>>>>> FETCH_HEAD
 </body>
 </html>
