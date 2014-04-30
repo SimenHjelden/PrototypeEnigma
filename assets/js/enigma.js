@@ -5,7 +5,7 @@
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage;
 
 	var init = function()
 	{
@@ -55,6 +55,7 @@
 		mapPage = "enigmaMap.html";
 		settingsPage = "settings.html";
 		addPostPage = "reg-post.html";
+		editPostPage = "edit-post.html"
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
