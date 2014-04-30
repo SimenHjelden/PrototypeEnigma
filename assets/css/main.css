@@ -114,7 +114,6 @@ padding:10px;
 border-top:solid 1px #FFF;
 border-bottom:solid 1px #CCC;
 }
-<<<<<<< HEAD
 
 ul.listModule li:hover {
 	background-color: #efefef;
@@ -129,7 +128,9 @@ ul.listModule li:hover h4{
 
 ul.listModule li h4, ul.listModule li i {
 	display: inline-block;
-=======
+	
+}
+
 ul.listModule li:hover{
 background-color:#efefef;
 border-bottom:solid 1px #FFF;
@@ -345,19 +346,7 @@ cursor:pointer;
     transition: transform 250ms ease;
     transform: translateX(100%);
 	}	
-=======
-/*transition*/
--webkit-transition:-webkit-transform 250ms ease;
-   -moz-transition:   -moz-transform 250ms ease;
-     -o-transition:     -o-transform 250ms ease;
-        transition:        transform 250ms ease;
-/*transform*/
--webkit-transform:translateX(-100%);
-   -moz-transform:translateX(-100%);
-    -ms-transform:translateX(-100%);
-     -o-transform:translateX(-100%);
-        transform:translateX(-100%);
-}
+
 .swipeEdit{
 /*transition*/
 -webkit-transition:-webkit-transform 250ms ease;
@@ -371,4 +360,3 @@ cursor:pointer;
      -o-transform:translateX(100%);
         transform:translateX(100%);
 }
->>>>>>> FETCH_HEAD
