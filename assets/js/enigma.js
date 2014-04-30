@@ -5,7 +5,7 @@
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage;
 
 	var init = function()
 	{
@@ -55,7 +55,8 @@
 		mapPage = "enigmaMap.html";
 		settingsPage = "settings.html";
 		addPostPage = "reg-post.html";
-		editPostPage = "edit-post.html"
+		editPostPage = "edit-post.html";
+		regTeamPage = "reg-team.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -161,12 +162,14 @@
 				listitem.addClass("swipeDelete");
 				alert("Fuksjon som illustrerer sletting av element");	
 				
+				
 		}),
 		
 		$(".listModule li").on("swiperight", function(e){
 				var listitem = $(this);
 				listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
+				
 			}),
 			
 		$(".listActions .fa-pencil").click(function(e){
