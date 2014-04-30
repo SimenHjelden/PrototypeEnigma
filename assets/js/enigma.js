@@ -93,8 +93,10 @@
 					goTo(loginPage);
 				}, false);		
 			}
-			alert("93");
-			alert("94 : [ " + teamBtn + " ]");
+
+		/*
+		alert("93");
+		alert("94 : [ " + teamBtn + " ]");
 		if(teamBtn != null)
 			{
 				alert("teamBtn");
@@ -103,7 +105,7 @@
 					alert("selected team");
 				}, false);
 			}
-			
+		*/		
 	}
 
 	var toggleBtn = function()
