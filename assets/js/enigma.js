@@ -3,9 +3,9 @@
 	// Elements
 	var container, pwedBlock;
 	// Buttons
-	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {};
+	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage, currentPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage;
 
 	var init = function()
 	{
@@ -37,6 +37,7 @@
 		logoutBtn = document.getElementById("logoutBtn");
 		regBtn = document.getElementById("regBtn");
 		backBtn = document.getElementById("backBtn");
+		teamBtn = document.getElementById(".teamBtn");
 		switchBtn.div = document.getElementById("switchBtn");
 		switchBtn.toggler = document.getElementById("toggler");
 		switchBtn.on = false;
@@ -48,6 +49,7 @@
 		mainPage = "main.html";
 		regPage = "reg.html";
 		forgotPwPage = "forgot-pw.html";
+		selectedTeamPage = "selected-team.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -87,6 +89,16 @@
 					slettCookie();
 					goTo(loginPage);
 				}, false);		
+			}
+			alert("93");
+			alert("94 : [ " + teamBtn + " ]");
+		if(teamBtn != null)
+			{
+				alert("teamBtn");
+				teamBtn.addEventListener("click", function()
+				{
+					alert("selected team");
+				}, false);
 			}
 			
 	}
