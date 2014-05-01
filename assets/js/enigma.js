@@ -23,15 +23,17 @@
 	}
 	
 	var sjekkSession = function(){
+			var cp = currentPage;
 			if(document.cookie){
 				//alert("Cookie Finnes");
-				}
-			else{
+			}
+			else if((cp === regPage) || (cp === loginPage) || (cp === forgotPwPage)) {
+				//alert("Cookie finnes ikke, men du skal jo registrere deg eller gå til login page lizm");
+			}
+			else {
 				//alert("Cookie Finnes ikke");
-					if(currentPage != loginPage) {
-						goTo(loginPage);
-					}
-				}
+				goTo(loginPage);
+			}
 		}
 
 	var setObjects = function()

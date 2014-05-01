@@ -25,8 +25,12 @@
 	var setEventHandlers = function()
 	{	
 		if(checkPwd != null){checkPwd.addEventListener("change", checkedPwd, false); }
-		txtPwd.addEventListener("focus", pwdMatch, false);
-		txtRepeatPwd.addEventListener("focus", pwdMatch, false);
+		if(txtPwd != null) {
+			txtPwd.addEventListener("focus", pwdMatch, false);
+		}
+		if(txtRepeatPwd != null) {
+			txtRepeatPwd.addEventListener("focus", pwdMatch, false);
+		}
 	}
 	 
 	 
