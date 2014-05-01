@@ -3,8 +3,12 @@
 	// Elements
 	var container, pwedBlock, logo;
 	// Buttons
-	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
+	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn, createEnigmaBtn,
+	slettRebusBtn;
 	// Pages
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
+	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
+	myTeamPage, myRebusPage, selectedRebusPage;
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, selectedRebusPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage;
 
 	var init = function()
@@ -45,6 +49,8 @@
 		switchBtn.toggler = document.getElementById("toggler");
 		switchBtn.on = false;
 		pwedBlock = document.getElementById("showPassField");
+		createEnigmaBtn = document.getElementById("createEnigmaBtn");
+		slettRebusBtn = document.getElementById("slettRebusBtn");
 		logo = document.getElementById("logo");
 		
 
@@ -63,6 +69,7 @@
 		regRebusPage = "reg-rebus.html";
 		myTeamPage = "my-team.html";
 		myRebusPage = "my-rebus.html";
+		selectedRebusPage = "selected-rebus.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -103,6 +110,21 @@
 					slettCookie();
 					goTo(loginPage);
 				}, false);		
+			}
+		if(createEnigmaBtn != null)
+			{
+				createEnigmaBtn.addEventListener("click", function()
+					{
+						goTo(selectedRebusPage);
+					}, false);
+			}
+		if(slettRebusBtn != null)
+			{
+				slettRebusBtn.addEventListener("click", function()
+					{
+						alert("Rebusen ble slettet.");
+						goTo(myRebusPage);
+					}, false);
 			}
 				
 		logo.addEventListener("click", logoRedirect, false); 

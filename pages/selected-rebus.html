@@ -17,7 +17,7 @@
     </header>
     <section id="mainContent">
      	<button id="backBtn" class="btnFull darkGrey width100 margin10Bot">Tilbake</button>
-        <input id="createEnigmaBtn" class="btnFull redBtn percent10 width100 margin10Bot" type="button" value="Slett rebus" />
+        <input id="slettRebusBtn" class="btnFull redBtn percent10 width100 margin10Bot" type="button" value="Slett rebus" />
         <table style="width: 100%;">
             <thead style="text-align: left;">
                 <tr>
@@ -72,13 +72,36 @@
             </tbody>
         </table>
         </ul>
-        <input id="createEnigmaBtn" class="btnFull greenBtn percent10 margin10Bot" type="button" value="Lag ny post" />
+        <input id="createEnigmaBtn" class="btnFull greenBtn percent10 margin10Bot" type="button" value="Lag ny post" onclick="createNewPost();" />
 
     </section>
 </section>
 <script src="../assets/js/jquery-1.11.0.js"></script>
 <script src="../assets/js/enigma.js"></script>
 <script src="../assets/js/pwd-functions.js"></script>
-<script src="../assets/js/gMap.js"></script>
+<!--script src="../assets/js/gMap.js"></script-->
+<script>
+//Edit
+var edit = $(".fa-pencil");
+edit.click(function(){alert('Pretend you made this post editable')});
+
+//Delete
+var del = $(".fa-trash-o");
+del.click(function(){alert('Pretend you deleted this post')});
+
+var createNewPost = function() {
+    var row = $('#mainContent > table');
+    row.append("<tr>"
+                    +"<td>Asylet</td>"
+                    +"<td>Fysisk</td>"
+                    +"<td>true</td>"
+                    +"<td>kart</td>"
+                    +"<td>"
+                        +"<i class='fa fa-pencil'></i>"
+                        +"<i class='fa fa-trash-o'></i>"
+                    +"</td>"
+                +"</tr>");
+}
+</script>
 </body>
 </html>
