@@ -13,7 +13,7 @@
 <section id="enigma">
 	<header id="mainHeader">
     	<a href="main.html"><img src="../assets/img/logo2.png" id="logo" alt="ENIGMA-logo"></a>
-        <h1>Opprett Rebus</h1>
+        <h1>Endre Lag</h1>
     </header>
     <section id="mainContent">
         <button id="backBtn" class="btnFull darkGrey width100 margin10Bot">Tilbake</button>
@@ -21,25 +21,20 @@
         
         <div class="input-group margin-bottom-sm">
           <span class="input-group-addon"><i class="fa fa-font fa-fw"></i></span>
-          <input id="title" class="form-control" type="text" placeholder="Tittel">
+          <input id="title" class="form-control" type="text" placeholder="Lagnavn">
         </div>
         
-        <div class="input-group margin-bottom-sm">
-          <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
-          <input id="beskrivelse" class="form-control" type="text" placeholder="Beskrivelse">
-        </div>
-		<br>
-		<label>Vil du sette passord på rebusen?</label>
+		<p>Vil du sette passord på rebus?</p>
 		<br>
 		<div id="switchBtn">
 			<p>Ja</p>
 			<div id="toggler"></div>
 			<p>Nei</p>
 		</div>
-		
+
         <div id="showPassField" class="displayNone">
         <br>
-        <p id="pwdInfo">Passord brukes om man ønsker og opprette en lukket privat rebus</p>
+        <p id="pwdInfo">Passord brukes om man ønsker å opprette et privat lag</p>
         <br>
 	      <div class="input-group margin-bottom-sm ">
           	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
@@ -51,22 +46,8 @@
           </div>
           <br>
         </div>
-        <br/>
-        
-        <label>Startdato og sluttdato for rebus</label>
-        <br/>
-        <div class="input-group margin-bottom-sm displayInline width49p margin-2perc-right">
-          	<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-          	<input id="startDate" class="form-control  " type="date" placeholder = new Date()">
-        </div>
-        
 
-        <div class="input-group margin-bottom-sm displayInline width49p">
-          	<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-          	<input id="endDate" class="form-control  " type="date">
-        </div>
-        
-        <button id="createEnigmaBtn" type="submit" class="btnFull btn greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett rebus</button>
+        <button id="editEnigmaBtn" type="submit" class="btnFull greenBtn margin10Top"><i class="fa fa-plus"></i> Lagre Endringer</button>
 
     </section>
 </section>

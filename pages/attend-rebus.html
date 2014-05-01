@@ -16,24 +16,27 @@
         <h1>Meld på rebusløp</h1>
     </header>
     <section id="mainContent">
-    	<button id="backBtn" class="btnFull darkGrey width100 margin10Bot">Tilbake</button>
+    	<button id="backBtn" class="btnFull darkGrey width100 ">Tilbake</button>
         <br/>
-        <input id="txtSearch" type="text">
-        <button id="btnSearch" type="submit" class="btnFull greenBtn width100 margin10Top"><i class="fa fa-search"></i> Søk</button>
+        <input id="txtSearch" class="form-control width636p displayInline" placeholder="Søk her..." type="text">
+        <button id="btnSearch" type="submit" class="btnFull greenBtn width100 attendReset "><i class="fa fa-search"></i> Søk</button>
         <br/>
         <ul class="listModule">
-        <li>Grønnland Rundt
-        <input type="radio" class="checkAttend" name="group1" >
-        </li>
-        <li>NITH Fadderuke 2014
-        <input type="radio" class="checkAttend" name="group1">
-        </li>
-        <li>Bar Crawl
-        <input type="radio" class="checkAttend" name="group1">
-        </li>
-        <li>Old Boys Quiz Jam
-        <input type="radio" class="checkAttend" name="group1">
-        </li>
+	        <li onclick="velgRebus">Grønnland Rundt
+	        	<input type="radio" class="checkAttend" name="group1" >
+	        </li>
+	        
+	        <li>NITH Fadderuke 2014
+	        	<input type="radio" class="checkAttend" name="group1">
+	        </li>
+	        
+	        <li>Bar Crawl
+	        	<input type="radio" class="checkAttend" name="group1">
+	        </li>
+	        
+	        <li>Old Boys Quiz Jam
+	        	<input type="radio" class="checkAttend" name="group1">
+	        </li>
         </ul>
         <button class="grayBtn btnFull" type="button" >Meld På Rebusløp</button>
     </section>
