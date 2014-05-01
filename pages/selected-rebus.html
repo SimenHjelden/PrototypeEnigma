@@ -78,7 +78,7 @@
             </tbody>
         </table>
         </ul>
-        <input id="createEnigmaBtn" class="btnFull greenBtn percent10 margin10Bot" type="button" value="Lag ny post" onclick="createNewPost();" />
+        <input id="createEnigmaBtn" class="btnFull greenBtn percent10 margin10Bot" type="button" value="Lag ny post" />
 
     </section>
 </section>
@@ -89,25 +89,17 @@
 <script>
 //Edit
 var edit = $(".fa-pencil");
-edit.click(function(){alert('Pretend you made this post editable')});
+edit.click(function(){
+window.location.href = "edit-post.html";
+});
 
 //Delete
 var del = $(".fa-trash-o");
-del.click(function(){alert('Pretend you deleted this post')});
+del.click(function(){alert('Pretend you deleted this post')
+var tableRow = del.parent("tr");
+tableRow.remove(); 
+});
 
-var createNewPost = function() {
-    var row = $('#mainContent > table');
-    row.append("<tr>"
-                    +"<td>Asylet</td>"
-                    +"<td>Fysisk</td>"
-                    +"<td>true</td>"
-                    +"<td>kart</td>"
-                    +"<td>"
-                        +"<i class='fa fa-pencil'></i>"
-                        +"<i class='fa fa-trash-o'></i>"
-                    +"</td>"
-                +"</tr>");
-}
 </script>
 </body>
 </html>

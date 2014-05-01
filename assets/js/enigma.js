@@ -131,7 +131,11 @@
 			{
 				createEnigmaBtn.addEventListener("click", function()
 					{
+						if(currentPage === selectedRebusPage)
+						goTo(addPostPage);
+						else if(currentPage === addPostPage || currentPage === regRebusPage)
 						goTo(selectedRebusPage);
+						
 					}, false);
 			}
 		if(slettRebusBtn != null)
@@ -139,7 +143,7 @@
 				slettRebusBtn.addEventListener("click", function()
 					{
 						//alert("enigma.js:line113 | Rebusen ble slettet.");
-						goTo(myRebusPage);
+						goTo(myRebusPage);	
 					}, false);
 			}
 		if(rebusListBtn != null)
