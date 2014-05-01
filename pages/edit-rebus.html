@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Enigma</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+</head>
+
+<body>
+<section id="enigma">
+	<header id="mainHeader">
+    	<a href="main.html"><img src="../assets/img/logo2.png" id="logo" alt="ENIGMA-logo"></a>
+        <h1>Endre Rebus</h1>
+    </header>
+    <section id="mainContent">
+        <button id="backBtn" class="btnFull darkGrey width100 margin10Bot">Tilbake</button>
+        <br>
+        
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-font fa-fw"></i></span>
+          <input id="title" class="form-control" type="text" placeholder="Tittel">
+        </div>
+        
+        <div class="input-group margin-bottom-sm">
+          <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
+          <input id="beskrivelse" class="form-control" type="text" placeholder="Beskrivelse">
+        </div>
+		<br>
+		<label>Vil du sette passord på rebusen?</label>
+		<br>
+		<div id="switchBtn">
+			<p>Ja</p>
+			<div id="toggler"></div>
+			<p>Nei</p>
+		</div>
+		
+        <div id="showPassField" class="displayNone">
+        <br>
+        <p id="pwdInfo">Passord brukes om man ønsker og opprette en lukket privat rebus</p>
+        <br>
+	      <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtPwd" class="form-control" type="password" placeholder="Passord">
+          </div>
+          <div class="input-group margin-bottom-sm ">
+          	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+          	<input id="txtRepeatPwd" class="form-control" type="password" placeholder="Gjenta passord">
+          </div>
+          <br>
+        </div>
+        <br/>
+        
+        <label>Startdato og sluttdato for rebus</label>
+        <br/>
+        <div class="input-group margin-bottom-sm displayInline width49p margin-2perc-right">
+          	<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+          	<input id="startDate" class="form-control  " type="date" placeholder = new Date()">
+        </div>
+        
+
+        <div class="input-group margin-bottom-sm displayInline width49p">
+          	<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+          	<input id="endDate" class="form-control  " type="date">
+        </div>
+        
+        <button id="editEnigmaBtn" type="submit" class="btnFull btn greenBtn margin10Top"><i class="fa fa-plus"></i> Lagre Endringer</button>
+
+    </section>
+</section>
+<script src="../assets/js/jquery-1.11.0.js"></script>
+<script src="../assets/js/enigma.js"></script>
+<script src="../assets/js/pwd-functions.js"></script>
+<script src="../assets/js/gMap.js"></script>
+</body>
+</html>
