@@ -22,7 +22,7 @@
         <button id="btnSearch" type="submit" class="btnFull greenBtn width100 attendReset "><i class="fa fa-search"></i> Søk</button>
         <br/>
         <ul class="listModule">
-	        <li onclick="velgRebus">Grønnland Rundt
+	        <li>Grønland Rundt
 	        	<input type="radio" class="checkAttend" name="group1" >
 	        </li>
 	        
@@ -38,12 +38,20 @@
 	        	<input type="radio" class="checkAttend" name="group1">
 	        </li>
         </ul>
-        <button class="grayBtn btnFull" type="button" >Meld På Rebusløp</button>
+        <button id="attendRebus" class="greenBtn btnFull" type="button" >Meld På Rebusløp</button>
     </section>
 </section>
+
 <script src="../assets/js/jquery-1.11.0.js"></script>
 <script src="../assets/js/enigma.js"></script>
 <script src="../assets/js/pwd-functions.js"></script>
 <script src="../assets/js/gMap.js"></script>
+<script>
+	$('.listModule li').click(function(){
+	  $(this).toggleClass("selectedLi");
+	});
+	
+	
+</script>
 </body>
 </html>
