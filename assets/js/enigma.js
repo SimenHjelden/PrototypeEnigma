@@ -20,10 +20,10 @@
 	
 	var sjekkSession = function(){
 			if(document.cookie){
-				alert("Cookie Finnes");
+				//alert("Cookie Finnes");
 				}
 			else{
-				alert("Cookie Finnes ikke");
+				//alert("Cookie Finnes ikke");
 					if(currentPage != loginPage) {
 						goTo(loginPage);
 					}
