@@ -309,34 +309,23 @@ cursor:pointer;
 .swipeDelete{
 
 -webkit-transition: -webkit-transform 250ms ease;
--webkit-transform: translateX(-100%);
 -moz-transition: -moz-transform 250ms ease;
--moz-transform: translateX(-100%);
 -o-transition: -o-transform 250ms ease;
--o-transform: translateX(-100%);
 transition: transform 250ms ease;
+-webkit-transform: translateX(-100%);
+-moz-transform: translateX(-100%);
+-o-transform: translateX(-100%);
 transform: translateX(-100%);
 display:none;
 }
 	
-.swipeEdit{
-  -webkit-transition: -webkit-transform 250ms ease;
--webkit-transform: translateX(100%);
--moz-transition: -moz-transform 250ms ease;
--moz-transform: translateX(100%);
--o-transition: -o-transform 250ms ease;
--o-transform: translateX(100%);
-transition: transform 250ms ease;
-transform: translateX(100%);
-display:none;
-}	
 
 .swipeEdit{
 /*transition*/
--webkit-transition:-webkit-transform 250ms ease;
-   -moz-transition:   -moz-transform 250ms ease;
-     -o-transition:     -o-transform 250ms ease;
-        transition:        transform 250ms ease;
+-webkit-transition:-webkit-transform 1250ms ease;
+   -moz-transition:   -moz-transform 1250ms ease;
+     -o-transition:     -o-transform 1250ms ease;
+        transition:        transform 1250ms ease;
 /*transform*/
 -webkit-transform:translateX(100%);
    -moz-transform:translateX(100%);
