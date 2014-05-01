@@ -5,7 +5,7 @@
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, selectedRebusPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage;
 
 	var init = function()
 	{
@@ -54,6 +54,7 @@
 		regPage = "reg.html";
 		forgotPwPage = "forgot-pw.html";
 		selectedTeamPage = "selected-team.html";
+		selectedRebusPage  = "selected-rebus.html";
 		mapPage = "enigmaMap.html";
 		settingsPage = "settings.html";
 		addPostPage = "reg-post.html";
@@ -145,11 +146,13 @@
 	
 	
 	var removeLoading = function(){
+			if(currentPage != settingsPage && currentPage != mapPage && currentPage != addPostPage && currentPage != editPostPage && currentPage != selectedRebusPage){
 				$(document).on("pageshow", "[data-role='page']", function () {
  				$('div.ui-loader').remove();
+				})
+				}
 				
 				}
-				)}
 	
 	var logoRedirect = function(){
 		if(currentPage !== mainPage && sjekkSession)
