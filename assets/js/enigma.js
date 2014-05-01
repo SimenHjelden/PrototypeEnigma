@@ -5,7 +5,7 @@
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage;
 
 	var init = function()
 	{
@@ -59,6 +59,9 @@
 		addPostPage = "reg-post.html";
 		editPostPage = "edit-post.html";
 		regTeamPage = "reg-team.html";
+		regRebusPage = "reg-rebus.html";
+		myTeamPage = "my-team.html";
+		myRebusPage = "my-rebus.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -142,17 +145,14 @@
 	
 	
 	var removeLoading = function(){
-			if(currentPage === mapPage || currentPage === settingsPage || curentPage === addPostPage || currentPage === editPostPage){
-			}
-			else{
-			$(document).on("pageshow", "[data-role='page']", function () {
- 			$('div.ui-loader').remove();
+				$(document).on("pageshow", "[data-role='page']", function () {
+ 				$('div.ui-loader').remove();
+				
 				}
-			)}
-	}
+				)}
 	
 	var logoRedirect = function(){
-		if(currentPage !== mainPage)
+		if(currentPage !== mainPage && sjekkSession)
 			goTo(mainPage);
 			else
 			logo.removeEventListener("click", logoRedirect(), false);	
@@ -164,7 +164,8 @@
 		$(".listModule li").on("swipeleft", function(e){
 			var listitem = $(this);
 				listitem.addClass("swipeDelete");
-				alert("Fuksjon som illustrerer sletting av element");	
+				alert("Fuksjon som illustrerer sletting av element");
+				listitem.remove();	
 				
 				
 		}),
@@ -173,19 +174,20 @@
 				var listitem = $(this);
 				listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
-				
 			}),
 			
 		$(".listActions .fa-pencil").click(function(e){
 				var listitem = $(this).closest("li");
 				listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
+
 			}),
 			
 		$(".listActions .fa-trash-o").click(function(e){
 				var listitem = $(this).closest("li");
 				listitem.addClass("swipeDelete");
-				alert("Funksjon som illustrerer editering av et element");
+				alert("Funksjon som illustrerer sletting av et element");
+				listitem.remove();
 			})			
 	}
 	
