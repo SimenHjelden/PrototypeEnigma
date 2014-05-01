@@ -127,10 +127,13 @@
 					}, false);
 			}
 				
-		logo.addEventListener("click", logoRedirect, false); 
+		logo.addEventListener("click", logoRedirect, false);
+		
+		
 		
 	}
-
+	
+	
 	var toggleBtn = function()
 	{
 		if(!switchBtn.on) 
