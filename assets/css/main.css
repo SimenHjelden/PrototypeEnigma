@@ -109,14 +109,15 @@ margin:0px 10px 0px 0px;
 /*+-----------------+*/
 ul.listModule li{
 padding:20px 20px;
-border-bottom: 1px solid #bbbbbb;
+border-bottom: 1px solid #bbb;
 margin: 0 -10px;
+background: rgba(255,0255,255,.4)
 }
 ul.listModule li:nth-child(2n+1) {
-	background: white;
+	background: rgba(255,255,255,.7);
 }
-ul.listModule li:last-child {
-	border-bottom: none;
+ul.listModule li:first-child {
+	border-top: 1px solid #bbb;
 }
 
 ul.listModule li h4{
