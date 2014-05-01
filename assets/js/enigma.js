@@ -160,6 +160,22 @@
 						goTo(myTeamPage);
 					}, false);
 			}
+			
+			if(addMemberBtn != null){
+				addMemberBtn.addEventListener("click", function(){
+					var teamMember = document.getElementById("txtUsername");
+					if(teamMember.value != null){
+						$(".listModule").append("<li><h4>" + teamMember.value + "</h4>"
+						 + "<div class='listActions'>"
+						  + "<a href='#' class='remove'>" 
+						   +  "<i class='fa fa-trash-o'></i></a>"
+						    + "</div>" 
+							+ "</li>");
+						}
+					}
+				
+				, false)
+				}
 					
 		logo.addEventListener("click", logoRedirect, false);
 		
