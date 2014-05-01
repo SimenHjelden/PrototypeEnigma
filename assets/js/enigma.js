@@ -4,14 +4,14 @@
 	var container, pwedBlock, logo;
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn, createEnigmaBtn,
-	slettRebusBtn, editEnigmaBtn;
+	slettRebusBtn, editEnigmaBtn, attendRebusBtn;
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
 	myTeamPage, myRebusPage, selectedRebusPage;
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, selectedRebusPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage,
-	editRebusPage, editTeamPage;
+	editRebusPage, editTeamPage, attendRebus;
 
 	var init = function()
 	{
@@ -56,6 +56,7 @@
 		createEnigmaBtn = document.getElementById("createEnigmaBtn");
 		editEnigmaBtn = document.getElementById("editEnigmaBtn");
 		slettRebusBtn = document.getElementById("slettRebusBtn");
+		attendRebusBtn = document.getElementById("attendRebus");
 		logo = document.getElementById("logo");
 		
 
@@ -77,6 +78,7 @@
 		selectedRebusPage = "selected-rebus.html";
 		editRebusPage = "edit-rebus.html";
 		editTeamPage = "edit-team.html";
+		attendRebus = "attend-rebus.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -130,6 +132,14 @@
 				slettRebusBtn.addEventListener("click", function()
 					{
 						alert("Rebusen ble slettet.");
+						goTo(myRebusPage);
+					}, false);
+			}
+		if(attendRebusBtn != null)
+			{
+				attendRebusBtn.addEventListener("click", function()
+					{
+						alert("Du har meldt deg på rebusen");
 						goTo(myRebusPage);
 					}, false);
 			}
@@ -264,5 +274,6 @@
 		document.cookie = "tall=;expires=" + dato.toUTCString();
 	}
 	window.onload = init();
-
+	
+	
 })();
