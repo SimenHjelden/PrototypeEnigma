@@ -4,14 +4,14 @@
 	var container, pwedBlock, logo;
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn, createEnigmaBtn,
-	slettRebusBtn, editEnigmaBtn, attendRebusBtn;
+	slettRebusBtn, editEnigmaBtn, rebusListBtn;
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
 	myTeamPage, myRebusPage, selectedRebusPage;
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, selectedRebusPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage,
-	editRebusPage, editTeamPage, attendRebus;
+	editRebusPage, editTeamPage;
 
 	var init = function()
 	{
@@ -48,7 +48,7 @@
 		logoutBtn = document.getElementById("logoutBtn");
 		regBtn = document.getElementById("regBtn");
 		backBtn = document.getElementById("backBtn");
-		teamBtn = document.getElementById(".teamBtn");
+		teamBtn = $(".teamBtn");
 		switchBtn.div = document.getElementById("switchBtn");
 		switchBtn.toggler = document.getElementById("toggler");
 		switchBtn.on = false;
@@ -56,7 +56,7 @@
 		createEnigmaBtn = document.getElementById("createEnigmaBtn");
 		editEnigmaBtn = document.getElementById("editEnigmaBtn");
 		slettRebusBtn = document.getElementById("slettRebusBtn");
-		attendRebusBtn = document.getElementById("attendRebus");
+		rebusListBtn = $('.rebusListBtn');
 		logo = document.getElementById("logo");
 		
 
@@ -78,7 +78,6 @@
 		selectedRebusPage = "selected-rebus.html";
 		editRebusPage = "edit-rebus.html";
 		editTeamPage = "edit-team.html";
-		attendRebus = "attend-rebus.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -131,17 +130,19 @@
 			{
 				slettRebusBtn.addEventListener("click", function()
 					{
-						alert("Rebusen ble slettet.");
+						//alert("enigma.js:line113 | Rebusen ble slettet.");
 						goTo(myRebusPage);
 					}, false);
 			}
-		if(attendRebusBtn != null)
+		if(rebusListBtn != null)
 			{
-				attendRebusBtn.addEventListener("click", function()
-					{
-						alert("Du har meldt deg på rebusen");
-						goTo(myRebusPage);
-					}, false);
+				rebusListBtn.click(function(){goTo(selectedRebusPage);});
+			}
+		if(teamBtn != null)
+			{
+				teamBtn.click(function() {
+					goTo(selectedTeamPage);
+				});
 			}
 				
 		logo.addEventListener("click", logoRedirect, false);
@@ -274,6 +275,5 @@
 		document.cookie = "tall=;expires=" + dato.toUTCString();
 	}
 	window.onload = init();
-	
-	
+
 })();
