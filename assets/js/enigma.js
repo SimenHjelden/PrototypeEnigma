@@ -4,12 +4,14 @@
 	var container, pwedBlock, logo;
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn, createEnigmaBtn,
-	slettRebusBtn;
+	slettRebusBtn, editEnigmaBtn;
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
 	myTeamPage, myRebusPage, selectedRebusPage;
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, selectedRebusPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, selectedRebusPage, currentPage, 
+	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage,
+	editRebusPage, editTeamPage;
 
 	var init = function()
 	{
@@ -52,6 +54,7 @@
 		switchBtn.on = false;
 		pwedBlock = document.getElementById("showPassField");
 		createEnigmaBtn = document.getElementById("createEnigmaBtn");
+		editEnigmaBtn = document.getElementById("editEnigmaBtn");
 		slettRebusBtn = document.getElementById("slettRebusBtn");
 		logo = document.getElementById("logo");
 		
@@ -72,6 +75,8 @@
 		myTeamPage = "my-team.html";
 		myRebusPage = "my-rebus.html";
 		selectedRebusPage = "selected-rebus.html";
+		editRebusPage = "edit-rebus.html";
+		editTeamPage = "edit-team.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -131,8 +136,20 @@
 				
 		logo.addEventListener("click", logoRedirect, false);
 		
-		
-		
+		if(editEnigmaBtn != null){
+			editEnigmaBtn.addEventListener("click", function(){
+				
+				if(currentPage === editRebusPage){
+					alert("Tenk at nå har du endret en rebus");
+					goTo(myRebusPage);
+					}
+				else if(currentPage === editTeamPage){
+					alert("Tenk at nå har du endret et lag");
+					goTo(myTeamPage);
+					}	
+				
+				})
+			}	
 	}
 	
 	
@@ -205,12 +222,20 @@
 				var listitem = $(this);
 					listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
+				if(currentPage === myTeamPage)
+					goTo(editTeamPage);
+				else if(currentPage === myRebusPage)
+					goTo(editRebusPage);
 			}),
 			
 		$(".listActions .fa-pencil").click(function(e){
 				var listitem = $(this).closest("li");
 					listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
+				if(currentPage === myTeamPage)
+					goTo(editTeamPage);
+				else if(currentPage === myRebusPage)
+					goTo(editRebusPage);
 			}),
 			
 		$(".listActions .fa-trash-o").click(function(e){
