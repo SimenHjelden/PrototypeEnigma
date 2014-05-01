@@ -8,10 +8,8 @@
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
-	myTeamPage, myRebusPage, selectedRebusPage;
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, selectedRebusPage, currentPage, 
-	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage,
-	editRebusPage, editTeamPage;
+	myTeamPage, myRebusPage, selectedRebusPage, selectedRebusPage, editRebusPage, 
+	editTeamPage;
 
 	var init = function()
 	{
@@ -102,7 +100,15 @@
 			{
 				backBtn.addEventListener("click", function()
 					{
-						history.go(-1);
+						var currUrl = window.location.pathname.split( '/' );
+						var prevUrl = document.referrer;
+						var currPageParent = currUrl[currUrl.length - 3];
+						prevUrl = prevUrl.split( '/' );
+						var prevPageParent = prevUrl[prevUrl.length - 3];
+						if(currPageParent === prevPageParent) {
+							alert(prevUrl[prevUrl.length - 1]);
+							history.go(-1);
+						}
 					}, false);
 			}
 		if(switchBtn.div != null)
