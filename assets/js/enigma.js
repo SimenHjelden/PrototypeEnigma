@@ -104,10 +104,8 @@
 						prevUrl = prevUrl.split( '/' );
 						var prevPageParent = prevUrl[prevUrl.length - 3];
 						if(currPageParent === prevPageParent) {
-							if(prevUrl[prevUrl.length - 1] != ) {
-
-							}
-							//history.go(-1);
+							alert(prevUrl[prevUrl.length - 1]);
+							history.go(-1);
 						}
 					}, false);
 			}
