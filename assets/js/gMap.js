@@ -1,4 +1,5 @@
 function initialize() {
+
   navigator.geolocation.getCurrentPosition(function(position){
 
     var mapOptions = {
@@ -29,4 +30,7 @@ function initialize() {
   });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+if($("#map-canvas")!= null) {
+  google.maps.event.addDomListener(window, 'load', initialize);
+}
+
