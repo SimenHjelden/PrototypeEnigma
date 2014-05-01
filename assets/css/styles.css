@@ -148,7 +148,7 @@ line-height:30px;
 /*+-----------------+*/
 
 .btnFull{
-padding:12px;
+padding:14px;
 width:100%;
 margin:10px 0;
 /*border-radius*/
@@ -257,8 +257,14 @@ width:100px !important;
 .width150{
 width:195px !important;
 }
+.width250{
+width: 350px !important;
+}
 .width49p {
 	width: 49% !important;
+}
+.width636p{
+	width:63.6% !important;
 }
 
 /*+-----------------+*/
@@ -267,6 +273,9 @@ width:195px !important;
 /*|                 |*/
 /*+-----------------+*/
 
+.attendReset {
+margin: 1px 0 10px 10px !important;
+}
 .margin10Full{
 margin:10px !important;
 }
@@ -278,6 +287,9 @@ margin:0 0 10px 0;
 }
 .margin-2perc-right {
 	margin-right: 2%;
+}
+.margin10left{
+	margin-left: 10px;
 }
 .marginTop0{
 margin-top:0;
