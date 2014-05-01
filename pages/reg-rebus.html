@@ -28,13 +28,13 @@
           <span class="input-group-addon"><i class="fa fa-align-justify fa-fw"></i></span>
           <input id="beskrivelse" class="form-control" type="text" placeholder="Beskrivelse">
         </div>
-		
+		<br>
+		<p>Vil du sette passord på rebus?</p>
+		<br>
 		<div id="switchBtn">
 			<p>Ja</p>
-			
 			<div id="toggler"></div>
 			<p>Nei</p>
-			
 		</div>
 		
         <div id="showPassField" class="displayNone">
@@ -43,25 +43,24 @@
         <br>
 	      <div class="input-group margin-bottom-sm ">
           	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-          	<input id="txtPwd" class="form-control" type="text" placeholder="Passord">
+          	<input id="txtPwd" class="form-control" type="password" placeholder="Passord">
           </div>
           <div class="input-group margin-bottom-sm ">
           	<span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
-          	<input id="txtRepeatPwd" class="form-control" type="text" placeholder="Gjenta passord">
+          	<input id="txtRepeatPwd" class="form-control" type="password" placeholder="Gjenta passord">
           </div>
           <br>
         </div>
         <br/>
         <label>Tidsperiode</label>
         <br/>
-        <input id="startDate" type="date">
+        <input id="startDate" type="date" palceholder = new Date()>
         <input id="endDate" type="date">
         <button id="createEnigmaBtn" type="submit" class="btnFull btn greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett rebus</button>
 
     </section>
 </section>
 <script src="../assets/js/jquery-1.11.0.js"></script>
-<script src="../assets/js/jquery.mobile-1.4.2.js"></script>
 <script src="../assets/js/enigma.js"></script>
 <script src="../assets/js/pwd-functions.js"></script>
 <script src="../assets/js/gMap.js"></script>

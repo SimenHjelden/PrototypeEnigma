@@ -1,26 +1,29 @@
 (function(){
 
 	// Elements
-	var container, pwedBlock;
+	var container, pwedBlock, logo;
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn;
 	// Pages
-	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage;
+	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, myTeamPage, myRebusPage;
 
 	var init = function()
 	{
+		
 		setObjects();
 		setEventHandlers();
 		swipeHandlers();
 		sjekkSession();
+		removeLoading();
+		
 	}
 	
 	var sjekkSession = function(){
 			if(document.cookie){
-				alert("Cookie Finnes");
+				//alert("Cookie Finnes");
 				}
 			else{
-				alert("Cookie Finnes ikke");
+				//alert("Cookie Finnes ikke");
 					if(currentPage != loginPage) {
 						goTo(loginPage);
 					}
@@ -42,6 +45,7 @@
 		switchBtn.toggler = document.getElementById("toggler");
 		switchBtn.on = false;
 		pwedBlock = document.getElementById("showPassField");
+		logo = document.getElementById("logo");
 		
 
 		// PageUrls
@@ -50,12 +54,21 @@
 		regPage = "reg.html";
 		forgotPwPage = "forgot-pw.html";
 		selectedTeamPage = "selected-team.html";
+		mapPage = "enigmaMap.html";
+		settingsPage = "settings.html";
+		addPostPage = "reg-post.html";
+		editPostPage = "edit-post.html";
+		regTeamPage = "reg-team.html";
+		regRebusPage = "reg-rebus.html";
+		myTeamPage = "my-team.html";
+		myRebusPage = "my-rebus.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
 	var setEventHandlers = function()
 	{	
-
+		
+		
 		if(loginBtn != null)
 			{
 				loginBtn.addEventListener("click", login, false);
@@ -90,19 +103,8 @@
 					goTo(loginPage);
 				}, false);		
 			}
-
-		/*
-		alert("93");
-		alert("94 : [ " + teamBtn + " ]");
-		if(teamBtn != null)
-			{
-				alert("teamBtn");
-				teamBtn.addEventListener("click", function()
-				{
-					alert("selected team");
-				}, false);
-			}
-		*/		
+				
+		logo.addEventListener("click", logoRedirect, false); 
 	}
 
 	var toggleBtn = function()
@@ -122,6 +124,7 @@
 
 		}
 	}
+	
 	var login = function()
 	{
 		// Do loginmagic
@@ -140,12 +143,30 @@
 		window.location.assign(pageUrl);
 	}
 	
+	
+	var removeLoading = function(){
+				$(document).on("pageshow", "[data-role='page']", function () {
+ 				$('div.ui-loader').remove();
+				
+				}
+				)}
+	
+	var logoRedirect = function(){
+		if(currentPage !== mainPage && sjekkSession)
+			goTo(mainPage);
+			else
+			logo.removeEventListener("click", logoRedirect(), false);	
+		
+		}
+	
 		
 	var swipeHandlers = function(){
 		$(".listModule li").on("swipeleft", function(e){
 			var listitem = $(this);
 				listitem.addClass("swipeDelete");
-				alert("Fuksjon som illustrerer sletting av element");	
+				alert("Fuksjon som illustrerer sletting av element");
+				listitem.remove();	
+				
 				
 		}),
 		
@@ -159,12 +180,14 @@
 				var listitem = $(this).closest("li");
 				listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
+
 			}),
 			
 		$(".listActions .fa-trash-o").click(function(e){
 				var listitem = $(this).closest("li");
 				listitem.addClass("swipeDelete");
-				alert("Funksjon som illustrerer editering av et element");
+				alert("Funksjon som illustrerer sletting av et element");
+				listitem.remove();
 			})			
 	}
 	
