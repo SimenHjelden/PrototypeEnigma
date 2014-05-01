@@ -285,7 +285,7 @@
 					goTo(editRebusPage);
 			}),
 			
-		$(".listActions .fa-trash-o").click(function(e){
+		$(".listActions .fa .fa-trash-o").click(function(e){
 				var listitem = $(this).closest("li");
 				listitem.addClass("swipeDelete");
 				alert("Funksjon som illustrerer sletting av et element");
