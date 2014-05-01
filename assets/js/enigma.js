@@ -4,7 +4,7 @@
 	var container, pwedBlock, logo;
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn, createEnigmaBtn,
-	slettRebusBtn, editEnigmaBtn;
+	slettRebusBtn, editEnigmaBtn, rebusListBtn;
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
@@ -56,6 +56,7 @@
 		createEnigmaBtn = document.getElementById("createEnigmaBtn");
 		editEnigmaBtn = document.getElementById("editEnigmaBtn");
 		slettRebusBtn = document.getElementById("slettRebusBtn");
+		rebusListBtn = $('.rebusListBtn');
 		logo = document.getElementById("logo");
 		
 
@@ -129,9 +130,13 @@
 			{
 				slettRebusBtn.addEventListener("click", function()
 					{
-						alert("Rebusen ble slettet.");
+						//alert("enigma.js:line113 | Rebusen ble slettet.");
 						goTo(myRebusPage);
 					}, false);
+			}
+		if(rebusListBtn != null)
+			{
+				rebusListBtn.click(function(){goTo(selectedRebusPage);});
 			}
 				
 		logo.addEventListener("click", logoRedirect, false);
