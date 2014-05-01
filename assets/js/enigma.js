@@ -4,7 +4,7 @@
 	var container, pwedBlock, logo;
 	// Buttons
 	var loginBtn, logoutBtn, regBtn, backBtn, switchBtn = {}, teamBtn, createEnigmaBtn,
-	slettRebusBtn, editEnigmaBtn, rebusListBtn;
+	slettRebusBtn, editEnigmaBtn, rebusListBtn, btnAddMember, slettTeamBtn;
 	// Pages
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
@@ -55,6 +55,8 @@
 		editEnigmaBtn = document.getElementById("editEnigmaBtn");
 		slettRebusBtn = document.getElementById("slettRebusBtn");
 		rebusListBtn = $('.rebusListBtn');
+		addMemberBtn = document.getElementById("btnAddMember");
+		slettTeamBtn = document.getElementById("btnSlettTeam");
 		logo = document.getElementById("logo");
 		
 
@@ -150,7 +152,31 @@
 					goTo(selectedTeamPage);
 				});
 			}
+			
+		if(slettTeamBtn != null)
+			{
+				slettTeamBtn.addEventListener("click", function()
+					{
+						goTo(myTeamPage);
+					}, false);
+			}
+			
+			if(addMemberBtn != null){
+				addMemberBtn.addEventListener("click", function(){
+					var teamMember = document.getElementById("txtUsername");
+					if(teamMember.value != null){
+						$(".listModule").append("<li><h4>" + teamMember.value + "</h4>"
+						 + "<div class='listActions'>"
+						  + "<a href='#' class='remove'>" 
+						   +  "<i class='fa fa-trash-o'></i></a>"
+						    + "</div>" 
+							+ "</li>");
+						}
+					}
 				
+				, false)
+				}
+					
 		logo.addEventListener("click", logoRedirect, false);
 		
 		if(editEnigmaBtn != null){
