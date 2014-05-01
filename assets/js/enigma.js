@@ -208,7 +208,6 @@
 
 		document.cookie = "tall=;expires=" + dato.toUTCString();
 	}
-		
 	window.onload = init();
 
 })();
