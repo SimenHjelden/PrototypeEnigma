@@ -29,7 +29,7 @@
           <input id="beskrivelse" class="form-control" type="text" placeholder="Beskrivelse">
         </div>
 		<br>
-		<p>Vil du sette passord på rebus?</p>
+		<label>Vil du sette passord på rebusen?</label>
 		<br>
 		<div id="switchBtn">
 			<p>Ja</p>
@@ -52,10 +52,21 @@
           <br>
         </div>
         <br/>
-        <label>Tidsperiode</label>
+        
+        <label>Startdato og sluttdato for rebus</label>
         <br/>
-        <input id="startDate" type="date" palceholder = new Date()>
-        <input id="endDate" type="date">
+        <div class="input-group margin-bottom-sm displayInline width40p margin-2perc-right">
+          	<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+          	<input id="startDate" class="form-control  " type="date" placeholder = new Date()">
+        </div>
+        
+
+        <div class="input-group margin-bottom-sm displayInline width40p">
+          	<span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+          	<input id="endDate" class="form-control  " type="date">
+        </div>
+        
+        
         <button id="createEnigmaBtn" type="submit" class="btnFull btn greenBtn margin10Top"><i class="fa fa-plus"></i> Opprett rebus</button>
 
     </section>

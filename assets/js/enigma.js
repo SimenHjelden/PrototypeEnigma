@@ -130,6 +130,7 @@
 			}
 				
 		logo.addEventListener("click", logoRedirect, false); 
+		
 	}
 
 	var toggleBtn = function()
@@ -199,15 +200,14 @@
 		
 		$(".listModule li").on("swiperight", function(e){
 				var listitem = $(this);
-				listitem.addClass("swipeEdit");
+					listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
 			}),
 			
 		$(".listActions .fa-pencil").click(function(e){
 				var listitem = $(this).closest("li");
-				listitem.addClass("swipeEdit");
+					listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
-
 			}),
 			
 		$(".listActions .fa-trash-o").click(function(e){
