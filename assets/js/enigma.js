@@ -48,7 +48,7 @@
 		logoutBtn = document.getElementById("logoutBtn");
 		regBtn = document.getElementById("regBtn");
 		backBtn = document.getElementById("backBtn");
-		teamBtn = document.getElementById(".teamBtn");
+		teamBtn = $(".teamBtn");
 		switchBtn.div = document.getElementById("switchBtn");
 		switchBtn.toggler = document.getElementById("toggler");
 		switchBtn.on = false;
@@ -137,6 +137,12 @@
 		if(rebusListBtn != null)
 			{
 				rebusListBtn.click(function(){goTo(selectedRebusPage);});
+			}
+		if(teamBtn != null)
+			{
+				teamBtn.click(function() {
+					goTo(selectedTeamPage);
+				});
 			}
 				
 		logo.addEventListener("click", logoRedirect, false);
