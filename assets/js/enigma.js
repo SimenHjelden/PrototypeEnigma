@@ -281,20 +281,24 @@
 				var listitem = $(this);
 					listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
-				if(currentPage === myTeamPage)
+					if(currentPage === myTeamPage){
 					goTo(editTeamPage);
-				else if(currentPage === myRebusPage)
-					goTo(editRebusPage);
+				}
+				else if(currentPage === myRebusPage){
+					goTo(editRebusPage);	
+				}
 			}),
 			
 		$(".listActions .fa-pencil").click(function(e){
 				var listitem = $(this).closest("li");
 					listitem.addClass("swipeEdit");
 				alert("Funksjon som illustrerer editering av et element");
-				if(currentPage === myTeamPage)
+				if(currentPage === myTeamPage){
 					goTo(editTeamPage);
-				else if(currentPage === myRebusPage)
-					goTo(editRebusPage);
+				}
+				else if(currentPage === myRebusPage){
+					goTo(editRebusPage);	
+				}
 			}),
 			
 		$(".listActions .fa .fa-trash-o").click(function(e){
