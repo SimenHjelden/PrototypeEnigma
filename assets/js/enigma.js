@@ -9,7 +9,7 @@
 	var loginPage, regPage, mainPage, forgotPwPage, selectedTeamPage, currentPage, 
 	settingsPage, mapPage, addPostPage, editPostPage, regTeamPage, regRebusPage, 
 	myTeamPage, myRebusPage, selectedRebusPage, selectedRebusPage, editRebusPage, 
-	editTeamPage;
+	editTeamPage, attendRebusPage;
 
 	var init = function()
 	{
@@ -78,6 +78,7 @@
 		selectedRebusPage = "selected-rebus.html";
 		editRebusPage = "edit-rebus.html";
 		editTeamPage = "edit-team.html";
+		attendRebusPage = "attend-rebus.html";
 		currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 	}
 
@@ -135,7 +136,14 @@
 						goTo(addPostPage);
 						else if(currentPage === addPostPage || currentPage === regRebusPage)
 						goTo(selectedRebusPage);
-						
+						else if(currentPage === regPage)
+						goTo(mainPage);
+						else if(currentPage === myRebusPage)
+						goTo(regRebusPage);
+						else if(currentPage === settingsPage)
+						goTo(mainPage);
+						else if(currentPage === attendRebusPage)
+							goTo(myRebusPage);
 					}, false);
 			}
 		if(slettRebusBtn != null)
