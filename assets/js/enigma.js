@@ -140,11 +140,12 @@
 						goTo(mainPage);
 						else if(currentPage === myRebusPage)
 						goTo(regRebusPage);
-						else if(currentPage === myTeamPage){
-							goTo(regTeamPage);
-							}
+						else if(currentPage === myTeamPage)
+							goTo(regTeamPage);	
+						else if	(currentPage === regTeamPage)
+							goTo(myTeamPage);
 						else if(currentPage === settingsPage)
-						goTo(mainPage);
+							goTo(mainPage);
 						else if(currentPage === attendRebusPage)
 							goTo(myRebusPage);
 					}, false);
