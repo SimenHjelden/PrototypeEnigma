@@ -272,6 +272,12 @@
 	
 		
 	var swipeHandlers = function(){
+		if(currentPage === selectTeamPage || currentPage == attendRebusPage){
+		$('.listModule li').click(function(){
+	  	$(this).toggleClass("selectedLi");
+		});
+		}
+		
 		$(".listModule li").on("swipeleft", function(e){
 			var listitem = $(this);
 				listitem.addClass("swipeDelete");
